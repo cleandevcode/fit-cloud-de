@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.github.kilnn.tool.widget.FitPaddingMaterialToolbar android:id="@+id/toolbar" app:menu="@menu/menu_device_bind" app:title="@string/device_bind" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="?attr/actionBarSize">
+            <RelativeLayout android:id="@+id/layout_tips" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.5" android:layout_marginStart="32dp" android:layout_marginEnd="32dp">
+                <TextView android:textAppearance="?attr/textAppearanceHeadline4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="32dp" android:text="@string/action_search" android:layout_above="@+id/layout_tips_content"/>
+                <LinearLayout android:gravity="start|center_vertical" android:orientation="vertical" android:id="@+id/layout_tips_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/device_bind_tips1" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/device_bind_tips2" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/device_bind_tips3" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/device_bind_tips4" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/refresh_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout android:id="@+id/layout_location_service" android:minHeight="0dp" app:preferenceDivider="@drawable/shape_app_divider" app:showPreferenceDividers="bottom" style="@style/Widget.FitCloudPro.PreferenceBase">
+                        <TextView android:textColor="?attr/colorError" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/device_scan_tips_location_service" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_enable_location_service"/>
+                        <Button android:id="@+id/btn_enable_location_service" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_turn_on" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Outlined.Round.Small"/>
+                    </com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout>
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/scan_devices_recycler_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                </LinearLayout>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </FrameLayout>
+        <com.github.kilnn.tool.widget.bottomsheet.RatioBottomSheetLayout android:orientation="vertical" android:id="@+id/bottom_sheet_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:behavior_peekHeight="?attr/actionBarSize" app:fabAlignMode="center" app:gestureInsetBottomIgnored="true" app:heightRatio="@fraction/bottom_sheet_layout_height_ratio" app:hideOnExpand="true">
+            <com.google.android.material.appbar.MaterialToolbar android:id="@+id/bottom_toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:navigationIcon="@drawable/ic_baseline_expand_less_24" app:title="@string/device_others" app:titleCentered="false" app:titleTextAppearance="?attr/textAppearanceSubtitle2" app:titleTextColor="?android:attr/textColorSecondary" style="@style/Widget.FitCloudPro.Toolbar.OnSurface"/>
+            <TextView android:textAppearance="?attr/textAppearanceCaption" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/device_others_des" android:paddingStart="16dp" android:paddingEnd="16dp"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/other_devices_recycler_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </com.github.kilnn.tool.widget.bottomsheet.RatioBottomSheetLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/fab_scan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_baseline_search_24" android:contentDescription="@string/action_search" app:layout_anchor="@+id/bottom_sheet_layout" app:maxImageSize="32dp" app:tint="?attr/colorOnPrimary"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

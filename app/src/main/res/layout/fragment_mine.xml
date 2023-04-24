@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.github.kilnn.tool.widget.FitPaddingMaterialToolbar android:id="@+id/toolbar" app:navigationIcon="@null" app:title="@string/mine_module" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout style="@style/Widget.FitCloudPro.PreferenceGroup">
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_assist" android:visibility="gone" app:preferenceTitle="@string/assist_option" style="@style/Widget.FitCloudPro.PreferenceView.Item"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout android:id="@+id/item_user" style="@style/Widget.FitCloudPro.PreferenceView">
+                <ImageView android:id="@+id/img_avatar" android:layout_width="72dp" android:layout_height="72dp" android:scaleType="fitCenter" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:layout_marginEnd="12dp" android:layout_toEndOf="@+id/img_avatar">
+                    <Button android:id="@+id/btn_sign_in" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/account_sign_in" style="@style/Widget.FitCloudPro.Button.Outlined.Round"/>
+                    <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:id="@+id/tv_nick_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1"/>
+                    <TextView android:textAppearance="?attr/textAppearanceBody2" android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_id" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:maxLines="1"/>
+                </LinearLayout>
+            </com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_friends" app:preferenceTitle="@string/friends_module" app:preferenceTitleDrawableStart="@drawable/ic_setting_friends" app:preferenceType="type_image" style="@style/Widget.FitCloudPro.PreferenceView.Item"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_women_health" app:preferenceTitle="@string/wh_women_health" app:preferenceTitleDrawableStart="@drawable/ic_setting_women_health" style="@style/Widget.FitCloudPro.PreferenceView.Item"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_exercise_goal" app:preferenceTitle="@string/exercise_goal" app:preferenceTitleDrawableStart="@drawable/ic_setting_exercise_target" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_unit" app:preferenceTitle="@string/unit_module" app:preferenceTitleDrawableStart="@drawable/ic_setting_usual_unit" style="@style/Widget.FitCloudPro.PreferenceView.Item"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_third" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_google_fit" app:preferenceTitle="@string/google_fit_module" app:preferenceTitleDrawableStart="@drawable/ic_setting_googlefit" app:preferenceType="type_text" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_wechat" app:preferenceTitle="@string/wechat_sport_module" app:preferenceTitleDrawableStart="@drawable/ic_setting_wechat" style="@style/Widget.FitCloudPro.PreferenceView.Item"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_faq" app:preferenceTitle="@string/faq_module" app:preferenceTitleDrawableStart="@drawable/ic_setting_faq" style="@style/Widget.FitCloudPro.PreferenceView.Item"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_feedback" app:preferenceTitle="@string/feedback_module" app:preferenceTitleDrawableStart="@drawable/ic_setting_feedback" style="@style/Widget.FitCloudPro.PreferenceView.Item"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_settings" app:preferenceTitle="@string/action_setting" app:preferenceTitleDrawableStart="@drawable/ic_setting_settings" app:preferenceType="type_image" style="@style/Widget.FitCloudPro.PreferenceView.Item"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

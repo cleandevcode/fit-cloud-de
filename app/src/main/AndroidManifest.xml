@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="107" android:versionName="2.0.7" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="com.topstep.fitcloudpro" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="32"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <queries>
+        <package android:name="com.sina.weibo"/>
+        <package android:name="com.tencent.mobileqq"/>
+        <package android:name="com.tencent.mm"/>
+        <package android:name="com.facebook.katana"/>
+        <package android:name="com.twitter.android"/>
+        <package android:name="com.instagram.android"/>
+        <package android:name="com.google.android.apps.maps"/>
+        <intent>
+            <action android:name="androidx.camera.extensions.action.VENDOR_ACTION"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="0x10000"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <permission android:name="com.topstep.fitcloudpro.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.topstep.fitcloudpro.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:theme="@style/Theme.FitCloudPro" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="com.topstep.fitcloud.pro.MyApplication" android:allowBackup="false" android:supportsRtl="true" android:usesCleartextTraffic="true" android:networkSecurityConfig="@xml/network_security_config" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:requestLegacyExternalStorage="true">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCvisBJrCrXhu9m-SU0wnmB82lI30jJdB4"/>
+        <activity android:theme="@style/Theme.FitCloudPro.Splash" android:name="com.topstep.fitcloud.pro.ui.LaunchActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.topstep.fitcloud.pro.ui.policy.AskPolicyActivity"/>
+        <activity android:name="com.topstep.fitcloud.pro.ui.auth.AuthActivity" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name="com.topstep.fitcloud.pro.ui.MainActivity" android:launchMode="singleTask"/>
+        <activity android:name="com.topstep.fitcloud.pro.ui.device.bind.DeviceQrCodeActivity"/>
+        <activity android:name="com.topstep.fitcloud.pro.ui.data.ecg.EcgHealthReportActivity" android:screenOrientation="landscape"/>
+        <activity android:theme="@style/Theme.FitCloudPro.Camera" android:name="com.topstep.fitcloud.pro.ui.camera.CameraActivity" android:clearTaskOnLaunch="true" android:excludeFromRecents="true" android:launchMode="singleTask" android:screenOrientation="fullUser" android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation" android:resizeableActivity="true" android:rotationAnimation="seamless"/>
+        <activity android:name="com.topstep.fitcloud.pro.ui.sport.SportingActivity" android:launchMode="singleTask" android:parentActivityName="com.topstep.fitcloud.pro.ui.MainActivity"/>
+        <activity android:name="com.topstep.fitcloud.pro.ui.sport.SportDetailActivity" android:parentActivityName="com.topstep.fitcloud.pro.ui.MainActivity"/>
+        <activity android:name="com.topstep.fitcloud.pro.ui.sport.SportGoalActivity"/>
+        <receiver android:name="com.topstep.fitcloud.pro.function.MySmsBroadcastReceiver" android:permission="android.permission.BROADCAST_SMS" android:exported="true">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+                <action android:name="android.provider.OppoSpeechAssist.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <service android:label="@string/app_name" android:name="com.topstep.fitcloud.pro.function.MyNotificationListenerService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.topstep.fitcloud.pro.function.DeviceService" android:exported="false" android:foregroundServiceType="connectedDevice"/>
+        <service android:name="com.topstep.fitcloud.pro.function.SportService" android:exported="false" android:process=":sport" android:foregroundServiceType="location"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.topstep.fitcloudpro.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths"/>
+        </provider>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.topstep.fitcloudpro.androidx-startup">
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <provider android:name="com.github.kilnn.sport.preference.PreferenceProvider" android:enabled="true" android:exported="false" android:authorities="com.topstep.fitcloudpro.preferenceprovider"/>
+        <activity android:theme="@style/com_facebook_activity_theme" android:name="com.facebook.FacebookActivity" android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:name="com.facebook.CustomTabActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="fbconnect" android:host="cct.com.topstep.fitcloudpro"/>
+            </intent-filter>
+        </activity>
+        <provider android:name="com.facebook.internal.FacebookInitProvider" android:exported="false" android:authorities="com.topstep.fitcloudpro.FacebookInitProvider"/>
+        <receiver android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.facebook.AuthenticationTokenManager.CurrentAuthenticationTokenChangedBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data android:name="com.google.gms.fitness.sdk.version" android:value="21.1.0"/>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:name="org.eclipse.paho.android.service.MqttService"/>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable.BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <activity android:name="com.sina.weibo.sdk.web.WebActivity" android:exported="false" android:configChanges="screenSize|orientation" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.sina.weibo.sdk.share.ShareTransActivity" android:exported="true" android:launchMode="singleTask" android:configChanges="screenSize|orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <provider android:name="com.sina.weibo.sdk.content.FileProvider" android:exported="false" android:authorities="com.topstep.fitcloudpro.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/filepaths"/>
+        </provider>
+        <uses-library android:name="androidx.camera.extensions.impl" android:required="false"/>
+        <service android:name="androidx.camera.core.impl.MetadataHolderService" android:enabled="false" android:exported="false">
+            <meta-data android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER" android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
+        </service>
+        <service android:name="com.topstep.fitcloud.sdk.v2.dfu.Dfu6621Service" android:enabled="true" android:exported="false"/>
+        <service android:name="com.realsil.sdk.dfu.DfuService" android:enabled="true" android:exported="false"/>
+        <meta-data android:name="huawei_module_scankit_local" android:value="20500300"/>
+        <meta-data android:name="huawei_module_scankit_sdk_version" android:value="scanplus:2.5.0.300"/>
+        <meta-data android:name="com.huawei.hms.client.service.name:scanplus" android:value="scanplus:2.5.0.300"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:scanplus:huawei_module_scankit" android:value="1"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:scanplus:hmscore" android:value="1"/>
+        <activity android:name="com.huawei.hms.hmsscankit.ScanKitActivity"/>
+        <meta-data android:name="com.huawei.hms.client.service.name:dynamic-api" android:value="dynamic-api:1.0.13.303"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:dynamic-api:huawei_module_dynamicloader" android:value="2"/>
+        <provider android:name="com.huawei.hms.mlsdk.common.provider.MLInitializerProvider" android:exported="false" android:authorities="com.topstep.fitcloudpro.MLInitializerProvider"/>
+        <provider android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider" android:exported="false" android:authorities="com.topstep.fitcloudpro.AGCInitializeProvider"/>
+        <service android:name="com.huawei.agconnect.core.ServiceDiscovery" android:exported="false"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="263170919132843"/>
+        <meta-data android:name="Mob-AppKey" android:value="2086ac2709498"/>
+        <meta-data android:name="Mob-AppSecret" android:value="1c96c051c2615b728c613f52dfd6d9be"/>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.mob.tools.MobUIShell" android:exported="true" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <provider android:name="cn.sharesdk.framework.utils.ShareSDKFileProvider" android:exported="false" android:authorities="com.topstep.fitcloudpro.cn.sharesdk.ShareSDKFileProvider" android:grantUriPermissions="true"/>
+        <activity android:name="cn.sharesdk.tencent.qq.ReceiveActivity" android:exported="true" android:launchMode="singleTask" android:noHistory="true">
+            <intent-filter>
+                <data android:scheme="tencent1106276369"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tencent.tauth.AuthActivity" android:exported="false" android:launchMode="singleTask" android:noHistory="true"/>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.tencent.connect.common.AssistActivity" android:exported="false" android:screenOrientation="behind" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.facebook.FacebookActivity" android:exported="true" android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:name="com.facebook.CustomTabActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="fb263170919132843"/>
+            </intent-filter>
+        </activity>
+        <provider android:name="com.facebook.FacebookContentProvider" android:exported="true" android:authorities="com.facebook.app.FacebookContentProvider263170919132843"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="b80f57aa50643f68758bb2316e1ab77f"/>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="cn.sharesdk.wechat.utils.WechatHandlerActivity" android:exported="false" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity-alias android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.topstep.fitcloudpro.wxapi.WXEntryActivity" android:exported="true" android:targetActivity="cn.sharesdk.wechat.utils.WechatHandlerActivity"/>
+        <meta-data android:name="com.huawei.hms.client.appid" android:value="appid=102494185"/>
+    </application>
+    <queries>
+        <package android:name="com.tencent.mm"/>
+    </queries>
+</manifest>

@@ -1,0 +1,55 @@
+package com.xinyan.algorithm;
+
+/* loaded from: classes2.dex */
+public class SummaryInfo {
+    public long analysistime;
+    public long beatscount;
+    public long hravg;
+    public long hrhourmax;
+    public long hrhourmaxat;
+    public long hrhourmin;
+    public long hrhourminat;
+    public long hrmax;
+    public long hrmaxat;
+    public long hrmin;
+    public long hrminat;
+    public long pvccount = 0;
+    public long pvccouplecount = 0;
+    public long pvcbigcount = 0;
+    public long pvctrigcount = 0;
+    public long pvcruncount = 0;
+    public long pvcrunlongest = 0;
+    public long pvcrunlongestat = 0;
+    public long pvcrunmaxhr = 0;
+    public long pvcrunmaxhrat = 0;
+    public long pvcrunminhr = 0;
+    public long pvcrunminhrat = 0;
+    public long pausecount = 0;
+    public long pauselongest = 0;
+    public long pauselongestat = 0;
+    public long pm_apaced = 0;
+    public long pm_vpaced = 0;
+    public long pm_avpaced = 0;
+    public long pvcisolatecount = 0;
+    public long extachycount = 0;
+    public long extachymaxhr = 0;
+    public long extachymaxhrat = 0;
+    public long tachycount = 0;
+    public long tachymaxhr = 0;
+    public long tachymaxhrat = 0;
+    public long exbradycount = 0;
+    public long exbradyminhr = 0;
+    public long exbradyminhrat = 0;
+    public long bradycount = 0;
+    public long bradyminhr = 0;
+    public long bradyminhrat = 0;
+    public long pvccouplemaxhr = 0;
+    public long pvccouplemaxhrat = 0;
+    public long pvccoupleminhr = 0;
+    public long pvccoupleminhrat = 0;
+    public long afiblongrr1count = 0;
+    public long afiblongrr1duration = 0;
+    public long afiblongrr2count = 0;
+    public long afiblongrr2duration = 0;
+    public long bInvalidData = 0;
+}

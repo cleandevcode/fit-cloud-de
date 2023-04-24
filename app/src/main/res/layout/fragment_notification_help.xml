@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/ds_notification_help" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_telephony">
+                    <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_notification_help_title1"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_notification_help_des1"/>
+                </LinearLayout>
+                <Button android:id="@+id/btn_telephony" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_to_set" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Unelevated.Round.Small"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_telephony" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="8dp" android:paddingEnd="8dp"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_sms">
+                    <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_notification_help_title2"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_notification_help_des2"/>
+                </LinearLayout>
+                <Button android:id="@+id/btn_sms" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_to_set" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Unelevated.Round.Small"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_sms" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="8dp" android:paddingEnd="8dp"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_contacts">
+                    <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_notification_help_title3"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_notification_help_des3"/>
+                </LinearLayout>
+                <Button android:id="@+id/btn_contacts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_to_set" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Unelevated.Round.Small"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_contacts" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="8dp" android:paddingEnd="8dp"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_notification">
+                    <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_notification_help_title4"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:id="@+id/tv_notification_des" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <Button android:id="@+id/btn_notification" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_to_set" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Unelevated.Round.Small"/>
+            </RelativeLayout>
+            <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/ds_notification_help_title5"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

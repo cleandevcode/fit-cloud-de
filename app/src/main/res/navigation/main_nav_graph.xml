@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_nav" app:startDestination="@+id/homePageFragment">
+    <fragment android:label="@string/home_page_module" android:name="com.topstep.fitcloud.pro.ui.HomePageFragment" android:id="@+id/homePageFragment">
+        <action android:id="@+id/toExercise" app:destination="@+id/exerciseFragment"/>
+        <action android:id="@+id/toSleep" app:destination="@+id/sleepFragment"/>
+        <action android:id="@+id/toHeartRate" app:destination="@+id/heartRateFragment"/>
+        <action android:id="@+id/toOxygen" app:destination="@+id/oxygenFragment"/>
+        <action android:id="@+id/toBloodPressure" app:destination="@+id/bloodPressureFragment"/>
+        <action android:id="@+id/toTemperature" app:destination="@+id/temperatureFragment"/>
+        <action android:id="@+id/toPressure" app:destination="@+id/pressureFragment"/>
+        <action android:id="@+id/toEcg" app:destination="@+id/ecgFragment"/>
+        <action android:id="@+id/toWhDetail" app:destination="@+id/whDetailFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.ExerciseFragment" android:id="@+id/exerciseFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.SleepFragment" android:id="@+id/sleepFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.HeartRateFragment" android:id="@+id/heartRateFragment">
+        <action android:id="@+id/toDetail" app:destination="@+id/heartRateDetailFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.HeartRateDetailFragment" android:id="@+id/heartRateDetailFragment">
+        <argument android:name="friendId" app:argType="long"/>
+        <argument android:name="defaultDate" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.OxygenFragment" android:id="@+id/oxygenFragment">
+        <action android:id="@+id/toDetail" app:destination="@+id/oxygenDetailFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.OxygenDetailFragment" android:id="@+id/oxygenDetailFragment">
+        <argument android:name="friendId" app:argType="long"/>
+        <argument android:name="defaultDate" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.BloodPressureFragment" android:id="@+id/bloodPressureFragment">
+        <action android:id="@+id/toDetail" app:destination="@+id/bloodPressureDetailFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.BloodPressureDetailFragment" android:id="@+id/bloodPressureDetailFragment">
+        <argument android:name="friendId" app:argType="long"/>
+        <argument android:name="defaultDate" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.TemperatureFragment" android:id="@+id/temperatureFragment">
+        <action android:id="@+id/toDetail" app:destination="@+id/temperatureDetailFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.TemperatureDetailFragment" android:id="@+id/temperatureDetailFragment">
+        <argument android:name="friendId" app:argType="long"/>
+        <argument android:name="defaultDate" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.PressureFragment" android:id="@+id/pressureFragment">
+        <action android:id="@+id/toDetail" app:destination="@+id/pressureDetailFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.PressureDetailFragment" android:id="@+id/pressureDetailFragment">
+        <argument android:name="friendId" app:argType="long"/>
+        <argument android:name="defaultDate" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.ecg.EcgFragment" android:id="@+id/ecgFragment">
+        <action android:id="@+id/toHelp" app:destination="@+id/ecgHelpFragment"/>
+        <action android:id="@+id/toDetail" app:destination="@+id/ecgDetailFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.ecg.EcgHelpFragment" android:id="@+id/ecgHelpFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.ecg.EcgDetailFragment" android:id="@+id/ecgDetailFragment">
+        <argument android:name="ecgId" app:argType="string"/>
+        <action android:id="@+id/toDetailReport" app:destination="@+id/ecgDetailReportFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.ecg.EcgDetailReportFragment" android:id="@+id/ecgDetailReportFragment">
+        <argument android:name="ecgId" app:argType="string"/>
+        <argument android:name="reportUrl" app:argType="string" app:nullable="true"/>
+        <argument android:name="friendId" app:argType="long"/>
+    </fragment>
+    <fragment android:label="@string/device_module" android:name="com.topstep.fitcloud.pro.ui.DeviceFragment" android:id="@+id/deviceFragment">
+        <action android:id="@+id/toDeviceSpecify" app:destination="@+id/deviceSpecifyFragment"/>
+        <action android:id="@+id/toDeviceBind" app:destination="@+id/deviceBindFragment"/>
+        <action android:id="@+id/toConnectHelp" app:destination="@+id/connectHelpFragment"/>
+        <action android:id="@+id/toBgRunSettings" app:destination="@+id/bgRunSettingsFragment"/>
+        <action android:id="@+id/toCollectionCode" app:destination="@+id/collectionCodeFragment"/>
+        <action android:id="@+id/toBusinessCard" app:destination="@+id/businessCardFragment"/>
+        <action android:id="@+id/toQrCodeSettings" app:destination="@+id/qrCodeSettingsFragment"/>
+        <action android:id="@+id/toDrinkWater" app:destination="@+id/drinkWaterFragment"/>
+        <action android:id="@+id/toSedentary" app:destination="@+id/sedentaryFragment"/>
+        <action android:id="@+id/toTurnWristLighting" app:destination="@+id/turnWristLightingFragment"/>
+        <action android:id="@+id/toProtectionReminder" app:destination="@+id/protectionReminderFragment"/>
+        <action android:id="@+id/toHealthMonitor" app:destination="@+id/healthMonitorFragment"/>
+        <action android:id="@+id/toScreen" app:destination="@+id/screenFragment"/>
+        <action android:id="@+id/toNotification" app:destination="@+id/notificationFragment"/>
+        <action android:id="@+id/toAlarm" app:destination="@+id/alarmFragment"/>
+        <action android:id="@+id/toDialPush" app:destination="@+id/dialPushFragment"/>
+        <action android:id="@+id/toGamePush" app:destination="@+id/gamePushFragment"/>
+        <action android:id="@+id/toDialComponent" app:destination="@+id/dialComponentFragment"/>
+        <action android:id="@+id/toSportPush" app:destination="@+id/sportPushFragment"/>
+        <action android:id="@+id/toContacts" app:destination="@+id/contactsFragment"/>
+        <action android:id="@+id/toSongPush" app:destination="@+id/songPushFragment"/>
+    </fragment>
+    <fragment android:label="@string/mine_module" android:name="com.topstep.fitcloud.pro.ui.MineFragment" android:id="@+id/mineFragment">
+        <action android:id="@+id/toEditUser" app:destination="@+id/editUserFragment"/>
+        <action android:id="@+id/toUnit" app:destination="@+id/unitFragment"/>
+        <action android:id="@+id/toWebView" app:destination="@+id/webViewFragment"/>
+        <action android:id="@+id/toSettings" app:destination="@+id/settingsFragment"/>
+        <action android:id="@+id/toWechatSport" app:destination="@+id/wechatSportFragment"/>
+        <action android:id="@+id/toFeedback" app:destination="@+id/feedbackFragment"/>
+        <action android:id="@+id/toExerciseGoal" app:destination="@+id/exerciseGoalFragment"/>
+        <action android:id="@+id/toAssist" app:destination="@+id/assistFragment"/>
+        <action android:id="@+id/toFriend" app:destination="@+id/friendFragment"/>
+        <action android:id="@+id/toWhHomePage" app:destination="@+id/whHomePageFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.bind.DeviceSpecifyFragment" android:id="@+id/deviceSpecifyFragment">
+        <argument android:name="isAfterFillUser" app:argType="boolean"/>
+        <action android:id="@+id/toConnectHelp" app:destination="@+id/connectHelpFragment"/>
+        <action android:id="@+id/toBgRunSettings" app:destination="@+id/bgRunSettingsFragment"/>
+        <action android:id="@+id/toDeviceBind" app:destination="@+id/deviceBindFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.bind.DeviceBindFragment" android:id="@+id/deviceBindFragment">
+        <argument android:name="isAfterFillUser" app:argType="boolean"/>
+        <argument android:name="nameSpecify" app:argType="string" app:nullable="true"/>
+        <action android:id="@+id/toConnectHelp" app:destination="@+id/connectHelpFragment"/>
+        <action android:id="@+id/toBgRunSettings" app:destination="@+id/bgRunSettingsFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.bind.ConnectHelpFragment" android:id="@+id/connectHelpFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.bgrun.BgRunSettingsFragment" android:id="@+id/bgRunSettingsFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.CollectionCodeFragment" android:id="@+id/collectionCodeFragment">
+        <action android:id="@+id/toQrCodeSettings" app:destination="@+id/qrCodeSettingsFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.BusinessCardFragment" android:id="@+id/businessCardFragment">
+        <action android:id="@+id/toQrCodeSettings" app:destination="@+id/qrCodeSettingsFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.DrinkWaterFragment" android:id="@+id/drinkWaterFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.SedentaryFragment" android:id="@+id/sedentaryFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.TurnWristLightingFragment" android:id="@+id/turnWristLightingFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.ProtectionReminderFragment" android:id="@+id/protectionReminderFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.HealthMonitorFragment" android:id="@+id/healthMonitorFragment">
+        <action android:id="@+id/toHeartRateAlarm" app:destination="@+id/heartRateAlarmFragment"/>
+        <action android:id="@+id/toBloodPressureAlarm" app:destination="@+id/bloodPressureAlarmFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.HeartRateAlarmFragment" android:id="@+id/heartRateAlarmFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.BloodPressureAlarmFragment" android:id="@+id/bloodPressureAlarmFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.ScreenFragment" android:id="@+id/screenFragment">
+        <action android:id="@+id/toLongTime" app:destination="@+id/longTimeBrightDurationFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.LongTimeBrightDurationFragment" android:id="@+id/longTimeBrightDurationFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.NotificationFragment" android:id="@+id/notificationFragment">
+        <action android:id="@+id/toOther" app:destination="@+id/notificationOtherFragment"/>
+        <action android:id="@+id/toHelp" app:destination="@+id/notificationHelpFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.NotificationOtherFragment" android:id="@+id/notificationOtherFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.NotificationHelpFragment" android:id="@+id/notificationHelpFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.alarm.AlarmFragment" android:id="@+id/alarmFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.dial.push.DialPushFragment" android:id="@+id/dialPushFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.dial.component.DialComponentFragment" android:id="@+id/dialComponentFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.sport.push.SportPushFragment" android:id="@+id/sportPushFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.contacts.ContactsFragment" android:id="@+id/contactsFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.game.push.GamePushFragment" android:id="@+id/gamePushFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.song.push.SongPushFragment" android:id="@+id/songPushFragment">
+        <action android:id="@+id/toSelect" app:destination="@+id/audioSelectFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.song.push.AudioSelectFragment" android:id="@+id/audioSelectFragment">
+        <argument android:name="formats" app:argType="integer"/>
+        <argument android:name="remainingSize" app:argType="integer"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.QrCodeSettingsFragment" android:id="@+id/qrCodeSettingsFragment">
+        <argument android:name="type" app:argType="integer" app:nullable="false"/>
+        <action android:id="@+id/toWebView" app:destination="@+id/webViewFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.WebViewFragment" android:id="@+id/webViewFragment">
+        <argument android:name="title" app:argType="integer"/>
+        <argument android:name="url" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.wh.WhHomePageFragment" android:id="@+id/whHomePageFragment">
+        <action android:id="@+id/toWhSettings" app:destination="@+id/whSettingsFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.wh.WhSettingsFragment" android:id="@+id/whSettingsFragment">
+        <argument android:name="mode" app:argType="integer"/>
+        <action android:id="@+id/toWhDetail" app:destination="@+id/whDetailFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.wh.WhDetailFragment" android:id="@+id/whDetailFragment">
+        <argument android:name="mode" app:argType="integer"/>
+        <action android:id="@+id/toWhHomePage" app:destination="@+id/whHomePageFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.EditUserFragment" android:id="@+id/editUserFragment">
+        <action android:id="@+id/toEditIdentityId" app:destination="@+id/editIdentityIdFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.EditIdentityIdFragment" android:id="@+id/editIdentityIdFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.UnitFragment" android:id="@+id/unitFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.WechatSportFragment" android:id="@+id/wechatSportFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.assist.AssistFragment" android:id="@+id/assistFragment">
+        <action android:id="@+id/toDeviceInfo" app:destination="@+id/deviceInfoFragment"/>
+        <action android:id="@+id/toWeather" app:destination="@+id/weatherFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.friend.FriendFragment" android:id="@+id/friendFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.assist.DeviceInfoFragment" android:id="@+id/deviceInfoFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.assist.WeatherFragment" android:id="@+id/weatherFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.SettingsFragment" android:id="@+id/settingsFragment">
+        <action android:id="@+id/toAccountManage" app:destination="@+id/accountManageFragment"/>
+        <action android:id="@+id/toAbout" app:destination="@+id/aboutFragment"/>
+        <action android:id="@+id/toBgRunSettings" app:destination="@+id/bgRunSettingsFragment"/>
+        <action android:id="@+id/toConnectHelp" app:destination="@+id/connectHelpFragment"/>
+        <action android:id="@+id/toNotificationHelp" app:destination="@+id/notificationHelpFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.FeedbackFragment" android:id="@+id/feedbackFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.AccountManageFragment" android:id="@+id/accountManageFragment">
+        <action android:id="@+id/toAccountBind" app:destination="@+id/accountBindFragment"/>
+        <action android:id="@+id/toModifyPwd" app:destination="@+id/modifyPwdFragment"/>
+        <action android:id="@+id/toAccountDelete" app:destination="@+id/accountDeleteFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.AccountBindFragment" android:id="@+id/accountBindFragment">
+        <argument android:name="bindType" app:argType="com.topstep.fitcloud.pro.ui.settings.AccountBindType"/>
+        <argument android:name="needPassword" app:argType="boolean"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.ModifyPwdFragment" android:id="@+id/modifyPwdFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.AccountDeleteFragment" android:id="@+id/accountDeleteFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.AboutFragment" android:id="@+id/aboutFragment">
+        <action android:id="@+id/to_privacy_policy" app:destination="@+id/privacyPolicyFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.policy.PrivacyPolicyFragment" android:id="@+id/privacyPolicyFragment">
+        <argument android:name="showPrivacyPolicy" app:argType="boolean"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.ExerciseGoalFragment" android:id="@+id/exerciseGoalFragment">
+        <argument android:name="isAfterFillUser" app:argType="boolean"/>
+        <action android:id="@+id/toDeviceSpecify" app:destination="@+id/deviceSpecifyFragment"/>
+        <action android:id="@+id/toDeviceBind" app:destination="@+id/deviceBindFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.settings.HardwareUpgradeFragment" android:id="@+id/hardwareUpgradeFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.sport.SportFragment" android:id="@+id/sportFragment">
+        <action android:id="@+id/toHistory" app:destination="@+id/sportHistoryFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.sport.SportHistoryFragment" android:id="@+id/sportHistoryFragment"/>
+</navigation>

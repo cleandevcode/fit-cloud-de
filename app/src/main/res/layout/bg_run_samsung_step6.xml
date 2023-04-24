@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="#fcf9fe" android:layout_width="213.3dp" android:layout_height="438.5938dp">
+    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/bg_run_samsung_step6_1"/>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_bg_run_rect" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="11.5dp" android:paddingEnd="10.5dp">
+        <ImageView android:id="@+id/img01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bg_run_samsung_step6_2"/>
+        <ImageView android:id="@+id/img02" android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/ic_launcher" android:layout_marginStart="10dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="10dp">
+            <TextView android:textSize="28px" android:textColor="#322f35" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name"/>
+            <TextView android:textSize="19px" android:textColor="#a7a7a7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="@string/bg_run_samsung_step6_str1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/bg_run_samsung_step6_3"/>
+</LinearLayout>

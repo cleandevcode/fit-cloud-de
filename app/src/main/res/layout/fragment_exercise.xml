@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appbar" android:background="@drawable/shape_content_highlight_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:contentScrim="@color/base_content_scrim" app:layout_scrollFlags="exitUntilCollapsed|scroll" app:titleEnabled="false">
+            <LinearLayout android:orientation="vertical" android:paddingTop="?attr/actionBarSize" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax">
+                <RadioGroup android:orientation="horizontal" android:id="@+id/rg_data" android:layout_width="match_parent" android:layout_height="wrap_content" android:layoutDirection="ltr" style="@style/Widget.FitCloudPro.ContentPadding">
+                    <RadioButton android:textColor="@color/selector_module_tab_text" android:gravity="center" android:id="@+id/rb_day" android:background="@drawable/selector_module_tab_left_bg" android:layout_width="0dp" android:layout_height="38dp" android:button="@null" android:text="@string/data_time_today" android:layout_weight="1"/>
+                    <RadioButton android:textColor="@color/selector_module_tab_text" android:gravity="center" android:id="@+id/rb_week" android:background="@drawable/selector_module_tab_middle_bg" android:layout_width="0dp" android:layout_height="38dp" android:button="@null" android:text="@string/data_time_week" android:layout_weight="1"/>
+                    <RadioButton android:textColor="@color/selector_module_tab_text" android:gravity="center" android:id="@+id/rb_month" android:background="@drawable/selector_module_tab_right_bg" android:layout_width="0dp" android:layout_height="38dp" android:button="@null" android:text="@string/data_time_month" android:layout_weight="1"/>
+                </RadioGroup>
+                <com.github.mikephil.charting.charts.BarChart android:id="@+id/chart" android:layout_width="match_parent" android:layout_height="256dp" android:layout_marginTop="0dp" style="@style/Widget.FitCloudPro.ContentMargin"/>
+            </LinearLayout>
+            <com.github.kilnn.tool.widget.FitPaddingMaterialToolbar android:id="@+id/toolbar" app:layout_collapseMode="pin" app:menu="@menu/menu_share" app:title="@string/exercise_module" style="@style/Widget.FitCloudPro.Toolbar.OnPrimarySurface"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+                <com.topstep.fitcloud.pro.ui.widget.ExerciseCardLayout android:id="@+id/card_step" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <com.topstep.fitcloud.pro.ui.widget.ExerciseCardLayout android:id="@+id/card_distance" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:baselineAligned="false">
+                <com.topstep.fitcloud.pro.ui.widget.ExerciseCardLayout android:id="@+id/card_calorie" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <com.topstep.fitcloud.pro.ui.widget.ExerciseCardLayout android:id="@+id/card_goal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

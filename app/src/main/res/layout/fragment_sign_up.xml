@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/account_sign_up" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/toolbar">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" android:paddingStart="32dp" android:paddingEnd="32dp">
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/input_username" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="72dp" android:hint="@string/account_phone_number" app:endIconMode="clear_text" app:startIconDrawable="@drawable/ic_edit_account" app:startIconTint="?attr/colorPrimary">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/edit_username" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:inputType="phone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/input_pwd" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="@string/account_password_six_to_sixteen" app:endIconMode="password_toggle" app:startIconDrawable="@drawable/ic_edit_password" app:startIconTint="?attr/colorPrimary">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/edit_pwd" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <FrameLayout android:id="@+id/layout_auth_code" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/input_auth_code" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/account_auth_code">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/edit_auth_code" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:inputType="numberSigned" android:paddingEnd="112dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <Button android:enabled="false" android:textAppearance="?attr/textAppearanceBody2" android:layout_gravity="end|center_vertical" android:id="@+id/btn_auth_code" android:layout_width="112dp" android:layout_height="wrap_content" android:text="@string/account_request_auth_code" android:maxLines="1" android:textAllCaps="false" android:layout_marginEnd="32dp" style="@style/Widget.FitCloudPro.Button.Outlined"/>
+                <ImageView android:layout_gravity="end|center_vertical" android:id="@+id/img_auth_code_help" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_baseline_help_outline_24" android:layout_marginEnd="4dp"/>
+            </FrameLayout>
+            <Button android:layout_gravity="end" android:id="@+id/btn_toggle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0dp" android:text="@string/account_email" android:paddingStart="8dp" android:paddingEnd="8dp" style="@style/Widget.FitCloudPro.Button.Text"/>
+            <Button android:enabled="false" android:id="@+id/btn_sign_up" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/account_sign_up" style="@style/Widget.FitCloudPro.Button.Unelevated.Large"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

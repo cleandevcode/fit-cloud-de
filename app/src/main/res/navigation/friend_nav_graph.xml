@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/friend_nav_graph" app:startDestination="@+id/friendListFragment">
+    <fragment android:name="com.topstep.fitcloud.pro.ui.friend.FriendListFragment" android:id="@+id/friendListFragment">
+        <action android:id="@+id/toPreSearch" app:destination="@+id/friendPreSearchFragment"/>
+        <action android:id="@+id/toData" app:destination="@+id/friendDataFragment"/>
+        <action android:id="@+id/toMsg" app:destination="@+id/friendMsgFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.friend.FriendMsgFragment" android:id="@+id/friendMsgFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.friend.FriendPreSearchFragment" android:id="@+id/friendPreSearchFragment">
+        <action android:id="@+id/toSearch" app:destination="@+id/friendSearchFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.friend.FriendSearchFragment" android:id="@+id/friendSearchFragment">
+        <action android:id="@+id/toEditUser" app:destination="@+id/editUserFragment"/>
+        <action android:id="@+id/toInfo" app:destination="@+id/friendInfoFragment"/>
+        <action android:id="@+id/toAdd" app:destination="@+id/friendAddFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.friend.FriendDataFragment" android:id="@+id/friendDataFragment">
+        <argument android:name="friend" app:argType="com.topstep.fitcloud.pro.model.friend.Friend" app:nullable="false"/>
+        <action android:id="@+id/toInfo" app:destination="@+id/friendInfoFragment"/>
+        <action android:id="@+id/toRename" app:destination="@+id/friendRenameFragment"/>
+        <action android:id="@+id/toHeartRateDetail" app:destination="@+id/heartRateDetailFragment"/>
+        <action android:id="@+id/toOxygenDetail" app:destination="@+id/oxygenDetailFragment"/>
+        <action android:id="@+id/toBloodPressureDetail" app:destination="@+id/bloodPressureDetailFragment"/>
+        <action android:id="@+id/toTemperatureDetail" app:destination="@+id/temperatureDetailFragment"/>
+        <action android:id="@+id/toPressureDetail" app:destination="@+id/pressureDetailFragment"/>
+        <action android:id="@+id/toEcg" app:destination="@+id/friendEcgFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.friend.FriendInfoFragment" android:id="@+id/friendInfoFragment">
+        <argument android:name="friend" app:argType="com.topstep.fitcloud.pro.model.friend.Friend" app:nullable="false"/>
+        <action android:id="@+id/toRename" app:destination="@+id/friendRenameFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.friend.FriendRenameFragment" android:id="@+id/friendRenameFragment">
+        <argument android:name="friendId" app:argType="long"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.friend.FriendAddFragment" android:id="@+id/friendAddFragment">
+        <argument android:name="user" app:argType="com.topstep.fitcloud.pro.model.config.UserInfo" app:nullable="false"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.EditUserFragment" android:id="@+id/editUserFragment">
+        <action android:id="@+id/toEditIdentityId" app:destination="@+id/editIdentityIdFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.EditIdentityIdFragment" android:id="@+id/editIdentityIdFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.HeartRateDetailFragment" android:id="@+id/heartRateDetailFragment">
+        <argument android:name="friendId" app:argType="long"/>
+        <argument android:name="defaultDate" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.OxygenDetailFragment" android:id="@+id/oxygenDetailFragment">
+        <argument android:name="friendId" app:argType="long"/>
+        <argument android:name="defaultDate" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.BloodPressureDetailFragment" android:id="@+id/bloodPressureDetailFragment">
+        <argument android:name="friendId" app:argType="long"/>
+        <argument android:name="defaultDate" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.TemperatureDetailFragment" android:id="@+id/temperatureDetailFragment">
+        <argument android:name="friendId" app:argType="long"/>
+        <argument android:name="defaultDate" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.PressureDetailFragment" android:id="@+id/pressureDetailFragment">
+        <argument android:name="friendId" app:argType="long"/>
+        <argument android:name="defaultDate" app:argType="string"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.friend.FriendEcgFragment" android:id="@+id/friendEcgFragment">
+        <argument android:name="friend" app:argType="com.topstep.fitcloud.pro.model.friend.Friend" app:nullable="false"/>
+        <action android:id="@+id/toDetailReport" app:destination="@+id/ecgDetailReportFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.data.ecg.EcgDetailReportFragment" android:id="@+id/ecgDetailReportFragment">
+        <argument android:name="ecgId" app:argType="string"/>
+        <argument android:name="reportUrl" app:argType="string" app:nullable="true"/>
+        <argument android:name="friendId" app:argType="long"/>
+    </fragment>
+</navigation>

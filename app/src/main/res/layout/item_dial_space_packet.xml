@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <com.topstep.fitcloud.sdk.v2.utils.dial.DialView android:id="@+id/dial_view" android:layout_width="72dp" android:layout_height="wrap_content" app:dv_background_scale_type="center_crop" app:dv_check_enabled="true" app:dv_check_line_padding="2dp" app:dv_check_line_width="2dp" app:dv_shape="circle"/>
+    <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorPrimary" android:layout_gravity="center_horizontal" android:id="@+id/tv_space_size" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>

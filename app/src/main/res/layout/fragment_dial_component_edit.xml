@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_horizontal" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/ds_dial_edit" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/btn_save" android:layout_below="@+id/toolbar">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding">
+            <com.topstep.fitcloud.pro.ui.device.dial.component.DialComponentView android:layout_gravity="center" android:id="@+id/component_view" android:layout_width="wrap_content" android:layout_height="156dp"/>
+        </FrameLayout>
+        <ScrollView android:id="@+id/scroll_view" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_content" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </ScrollView>
+    </LinearLayout>
+    <Button android:id="@+id/btn_save" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/action_save" android:layout_alignParentBottom="true" android:layout_marginStart="32dp" android:layout_marginEnd="32dp" style="@style/Widget.FitCloudPro.Button.Unelevated.Large"/>
+</RelativeLayout>

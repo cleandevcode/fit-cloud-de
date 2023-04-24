@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/account_modify_password" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/toolbar">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:id="@+id/tv_auth_code_tips" android:layout_width="match_parent" android:layout_height="72dp" android:text="@string/account_auth_code_tips1" android:layout_marginStart="32dp" android:layout_marginEnd="32dp"/>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/input_username" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/account_email_and_phone_number" android:layout_marginStart="32dp" android:layout_marginEnd="32dp" app:endIconMode="clear_text" app:startIconDrawable="@drawable/ic_edit_account" app:startIconTint="?attr/colorPrimary">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/edit_username" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/input_pwd" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="@string/account_new_password_six_to_sixteen" android:layout_marginStart="32dp" android:layout_marginEnd="32dp" app:endIconMode="password_toggle" app:startIconDrawable="@drawable/ic_edit_password" app:startIconTint="?attr/colorPrimary">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/edit_pwd" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <FrameLayout android:id="@+id/layout_auth_code" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginStart="32dp" android:layout_marginEnd="32dp">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/input_auth_code" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/account_auth_code">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/edit_auth_code" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:inputType="numberSigned" android:paddingEnd="112dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <Button android:layout_gravity="end|center_vertical" android:id="@+id/btn_auth_code" android:layout_width="112dp" android:layout_height="wrap_content" android:text="@string/account_request_auth_code" android:maxLines="1" android:textAllCaps="false" android:layout_marginEnd="32dp" style="@style/Widget.FitCloudPro.Button.Outlined"/>
+                <ImageView android:layout_gravity="end|center_vertical" android:id="@+id/img_auth_code_help" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_baseline_help_outline_24" android:layout_marginEnd="4dp"/>
+            </FrameLayout>
+            <Button android:enabled="false" android:id="@+id/btn_commit" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/account_modify_password" android:layout_marginStart="32dp" android:layout_marginEnd="32dp" style="@style/Widget.FitCloudPro.Button.Unelevated.Large"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

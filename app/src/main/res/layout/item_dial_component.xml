@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.topstep.fitcloud.pro.ui.device.dial.DialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/card_view" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="center" android:id="@+id/img_view" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="12dp" android:scaleType="fitCenter"/>
+    <ImageView android:layout_gravity="end|top" android:id="@+id/img_select" android:background="@drawable/shape_dial_right_edit_background" android:padding="4dp" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_baseline_done_24" android:backgroundTint="?attr/colorPrimary" app:tint="@color/white"/>
+    <ImageView android:layout_gravity="bottom" android:id="@+id/img_edit" android:background="?attr/colorPrimary" android:padding="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_baseline_edit_24" android:alpha="0.75" app:tint="@color/white"/>
+</com.topstep.fitcloud.pro.ui.device.dial.DialCardView>

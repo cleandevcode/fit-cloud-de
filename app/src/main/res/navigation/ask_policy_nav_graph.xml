@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" app:startDestination="@+id/askPolicyFragment">
+    <fragment android:name="com.topstep.fitcloud.pro.ui.policy.AskPolicyFragment" android:id="@+id/askPolicyFragment">
+        <action android:id="@+id/to_privacy_policy" app:destination="@+id/privacyPolicyFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.policy.PrivacyPolicyFragment" android:id="@+id/privacyPolicyFragment">
+        <argument android:name="showPrivacyPolicy" app:argType="boolean"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_avg_pace"/>
+            <TextView android:textAppearance="?attr/textAppearanceHeadline6" android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_avg_pace" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_max_pace"/>
+            <TextView android:textAppearance="?attr/textAppearanceHeadline6" android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_max_pace" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_min_pace"/>
+            <TextView android:textAppearance="?attr/textAppearanceHeadline6" android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_min_pace" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:background="?attr/colorSurfaceSecondary" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?attr/textAppearanceHeadline6" android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/sport_distance" android:layout_weight="1"/>
+        <TextView android:textAppearance="?attr/textAppearanceHeadline6" android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/sport_pace" android:layout_weight="1"/>
+        <TextView android:textAppearance="?attr/textAppearanceHeadline6" android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/sport_use_time" android:layout_weight="1"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="6dp" android:layout_marginBottom="6dp"/>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/mine_module" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/toolbar">
+        <LinearLayout style="@style/Widget.FitCloudPro.PreferenceGroup">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout android:id="@+id/item_avatar" style="@style/Widget.FitCloudPro.PreferenceView">
+                    <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_info_avatar" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                    <ImageView android:id="@+id/img_avatar" android:layout_width="56dp" android:layout_height="56dp" android:scaleType="fitCenter" android:layout_alignParentEnd="true"/>
+                </com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_nickname" app:preferenceTextMaxWidth="200dp" app:preferenceTitle="@string/user_info_nickname" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_identity_id" app:preferenceTitle="@string/user_info_id" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_birthday" app:preferenceTitle="@string/user_info_birthday" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_sex" app:preferenceTitle="@string/user_info_sex" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_height" app:preferenceTitle="@string/user_info_height" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_weight" app:preferenceTitle="@string/user_info_weight" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_bp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_bp_private" app:preferenceTitle="@string/user_info_bp_private" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_sbp" app:preferenceTitle="@string/user_info_sbp" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_dbp" app:preferenceTitle="@string/user_info_dbp" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <TextView android:id="@+id/tv_bp_des" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/user_info_bp_tips" style="@style/Widget.FitCloudPro.ContentPadding.Horizontal"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

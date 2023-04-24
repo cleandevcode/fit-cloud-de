@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appbar" android:layout_width="match_parent" android:layout_height="wrap_content" app:elevation="0dp">
+        <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/ds_song_push" style="@style/Widget.FitCloudPro.Toolbar"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_info" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <TextView android:textAppearance="?attr/textAppearanceHeadline6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ds_song_storage"/>
+                        <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:id="@+id/tv_storage_remaining" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                    <com.google.android.material.divider.MaterialDivider android:layout_width="1px" android:layout_height="match_parent"/>
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <TextView android:textAppearance="?attr/textAppearanceHeadline6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ds_song_all"/>
+                        <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:id="@+id/tv_has_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/ds_song_transfer_tips"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_transfer" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding">
+                <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:id="@+id/tv_transfer_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_song_transfer_title"/>
+                <TextView android:textAppearance="?attr/textAppearanceCaption" android:id="@+id/tv_transfer_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+                <ProgressBar android:id="@+id/transfer_progress" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@+id/tv_transfer_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"/>
+                    <Button android:id="@+id/btn_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="0dp" android:text="@android:string/cancel" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Text.Small"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <com.topstep.fitcloud.pro.ui.widget.LoadingView android:id="@+id/loading_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/layout_empty" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_song_empty"/>
+                <TextView android:textAppearance="?attr/textAppearanceHeadline5" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ds_song_empty"/>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/ds_song_transfer_tips" style="@style/Widget.FitCloudPro.ContentPadding.Horizontal"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ds_song_storage"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_empty_remaining" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ds_song_storage_free_space"/>
+                </LinearLayout>
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider android:layout_width="match_parent" android:layout_height="1px"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="bottom|center_horizontal" android:id="@+id/fab_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:src="@drawable/ic_baseline_add_24" android:contentDescription="@string/action_add" app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

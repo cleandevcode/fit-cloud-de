@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:menu="@menu/menu_friend_action" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/img_avatar" android:layout_width="72dp" android:layout_height="72dp" android:layout_marginTop="32dp" android:scaleType="fitCenter"/>
+            <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:id="@+id/tv_nick_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:paddingStart="24dp" android:paddingEnd="24dp"/>
+            <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp"/>
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_birthday" app:preferenceTitle="@string/user_info_birthday" app:showPreferenceIndicator="false" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_sex" app:preferenceTitle="@string/user_info_sex" app:showPreferenceIndicator="false" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_height" app:preferenceTitle="@string/user_info_height" app:showPreferenceIndicator="false" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_weight" app:preferenceTitle="@string/user_info_weight" app:showPreferenceIndicator="false" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

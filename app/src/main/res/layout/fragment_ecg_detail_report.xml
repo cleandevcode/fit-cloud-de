@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/ecg_module" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:id="@+id/layout_web_view" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.github.kilnn.tool.widget.WebViewWrapper android:id="@+id/web_view_wrapper" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <ProgressBar android:id="@+id/progress_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="0dp" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+        </FrameLayout>
+        <com.topstep.fitcloud.pro.ui.widget.LoadingView android:id="@+id/loading_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </FrameLayout>
+</LinearLayout>

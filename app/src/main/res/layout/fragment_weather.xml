@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/weather_push" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weather_location" style="?attr/textAppearanceSubtitle1"/>
+                <TextView android:id="@+id/tv_location_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <TextView android:id="@+id/tv_location_msg" android:focusable="true" android:longClickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textIsSelectable="true" android:layout_marginStart="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/weather_city" style="?attr/textAppearanceSubtitle1"/>
+            <TextView android:id="@+id/tv_city_msg" android:focusable="true" android:longClickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textIsSelectable="true" android:layout_marginStart="8dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ds_page_config_weather" style="?attr/textAppearanceSubtitle1"/>
+                <TextView android:id="@+id/tv_weather_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <TextView android:id="@+id/tv_weather_msg" android:focusable="true" android:longClickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textIsSelectable="true" android:layout_marginStart="8dp"/>
+            <Button android:layout_gravity="center_horizontal" android:id="@+id/btn_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/weather_refresh" style="@style/Widget.FitCloudPro.Button.Unelevated.Round"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

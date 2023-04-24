@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.github.kilnn.tool.widget.SquareImageView android:id="@+id/img" android:layout_width="match_parent" android:layout_height="wrap_content" app:squareBase="width"/>
+    <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="@color/white" android:gravity="center" android:layout_gravity="bottom" android:id="@+id/tv_exist" android:background="@drawable/shape_skin_used_background" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/ds_game_skin_used" android:maxLines="1"/>
+</FrameLayout>

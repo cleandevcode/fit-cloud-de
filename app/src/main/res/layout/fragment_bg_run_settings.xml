@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/bg_run_settings_module" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.PreferenceGroup">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding.Horizontal">
+                <TextView android:textAppearance="?attr/textAppearanceCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bg_run_settings_message"/>
+                <TextView android:textAppearance="?attr/textAppearanceCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/bg_run_settings_tips"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_battery_optimization" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding.Horizontal">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bg_run_battery_optimization_title" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_battery_optimization"/>
+                    <Button android:id="@+id/btn_battery_optimization" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_to_set" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Unelevated.Round.Small"/>
+                </RelativeLayout>
+                <TextView android:textAppearance="?attr/textAppearanceCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/bg_run_battery_optimization_message"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_power_save" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding.Horizontal">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bg_run_power_save_title" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_power_save"/>
+                    <Button android:id="@+id/btn_power_save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_to_set" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Unelevated.Round.Small"/>
+                </RelativeLayout>
+                <TextView android:textAppearance="?attr/textAppearanceCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/bg_run_power_save_message"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_vivo_custom" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding.Horizontal">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bg_run_vivo_custom_title" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_vivo_custom"/>
+                    <Button android:id="@+id/btn_vivo_custom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_to_set" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Unelevated.Round.Small"/>
+                </RelativeLayout>
+                <TextView android:textAppearance="?attr/textAppearanceCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/bg_run_vivo_custom_message"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_miui_custom" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding.Horizontal">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bg_run_miui_custom_title" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_miui_custom"/>
+                    <Button android:id="@+id/btn_miui_custom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_to_set" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Unelevated.Round.Small"/>
+                </RelativeLayout>
+                <TextView android:textAppearance="?attr/textAppearanceCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/bg_run_miui_custom_message"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding.Horizontal">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bg_run_autostart_permission_title" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_autostart_permission"/>
+                    <Button android:id="@+id/btn_autostart_permission" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_to_set" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Unelevated.Round.Small"/>
+                </RelativeLayout>
+                <TextView android:textAppearance="?attr/textAppearanceCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/bg_run_autostart_permission_message"/>
+                <HorizontalScrollView android:id="@+id/layout_autostart_permission_scroll" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/layout_autostart_permission_steps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:divider="@drawable/shape_transparent_divider" android:showDividers="middle"/>
+                </HorizontalScrollView>
+                <TextView android:id="@+id/tv_autostart_permission_tips" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/bg_run_autostart_permission_tips"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

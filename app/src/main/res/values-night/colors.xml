@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="base_content_scrim">@color/color_surface</color>
+    <color name="color_background">#191c1f</color>
+    <color name="color_night_mask">#0000</color>
+    <color name="color_on_secondary">@color/black</color>
+    <color name="color_surface">#2a2b2e</color>
+    <color name="color_surface_secondary">#4a4b4e</color>
+    <color name="permissionx_default_dialog_bg">#3c4043</color>
+    <color name="permissionx_split_line">#55565a</color>
+    <color name="permissionx_text_color">#fff</color>
+    <color name="permissionx_tint_color">#8ab6f5</color>
+    <color name="system_ui_scrim_black">#b3000000</color>
+    <color name="system_ui_scrim_light">#2effffff</color>
+</resources>

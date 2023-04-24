@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:paddingTop="22dp" android:paddingBottom="22dp" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/Widget.FitCloudPro.ContentPadding.Horizontal">
+    <TextView android:textAppearance="?attr/textAppearanceHeadline6" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ecg_tips_view_title1"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+        <com.github.kilnn.tool.widget.DotView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" app:dot_color="?attr/colorPrimary" app:dot_size="6dp"/>
+        <TextView android:textAppearance="?attr/textAppearanceBody2" android:textColor="?android:attr/textColorSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ecg_tips_view1_text1" android:layout_marginStart="8dp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+        <com.github.kilnn.tool.widget.DotView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" app:dot_color="?attr/colorPrimary" app:dot_size="6dp"/>
+        <TextView android:textAppearance="?attr/textAppearanceBody2" android:textColor="?android:attr/textColorSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ecg_tips_view1_text2" android:layout_marginStart="8dp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+        <com.github.kilnn.tool.widget.DotView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" app:dot_color="?attr/colorPrimary" app:dot_size="6dp"/>
+        <TextView android:textAppearance="?attr/textAppearanceBody2" android:textColor="?android:attr/textColorSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ecg_tips_view1_text3" android:layout_marginStart="8dp"/>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+        <ImageView android:id="@+id/img_ecg_tips1" android:background="@drawable/ic_ecg_tips_img1" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toStartOf="@+id/img_ecg_tips2" app:layout_constraintHorizontal_chainStyle="spread" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <ImageView android:id="@+id/img_ecg_tips2" android:background="@drawable/ic_ecg_tips_img2" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toStartOf="@+id/img_ecg_tips3" app:layout_constraintStart_toEndOf="@+id/img_ecg_tips1" app:layout_constraintTop_toTopOf="0"/>
+        <ImageView android:id="@+id/img_ecg_tips3" android:background="@drawable/ic_ecg_tips_img3" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/img_ecg_tips2" app:layout_constraintTop_toTopOf="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/account_delete" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="72dp" android:text="@string/account_delete_confirm" android:layout_marginStart="32dp" android:layout_marginEnd="32dp"/>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/input_pwd" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/account_password" android:layout_marginStart="32dp" android:layout_marginEnd="32dp" app:endIconMode="password_toggle" app:startIconDrawable="@drawable/ic_edit_password" app:startIconTint="?attr/colorPrimary">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/edit_pwd" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button android:enabled="false" android:id="@+id/btn_sign_in" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/account_sign_in" android:layout_marginStart="32dp" android:layout_marginEnd="32dp" style="@style/Widget.FitCloudPro.Button.Unelevated.Large"/>
+            <TextView android:layout_gravity="center_horizontal" android:id="@+id/tv_others" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:layout_marginBottom="32dp" android:text="@string/account_or"/>
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/layout_quick_login" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/img_wechat" android:padding="8dp" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_app_wechat"/>
+                <ImageView android:id="@+id/img_qq" android:padding="8dp" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_app_qq" android:layout_marginStart="16dp"/>
+                <ImageView android:id="@+id/img_sina" android:padding="8dp" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_app_sina" android:layout_marginStart="16dp"/>
+                <ImageView android:id="@+id/img_facebook" android:padding="8dp" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_app_facebook" android:layout_marginStart="16dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

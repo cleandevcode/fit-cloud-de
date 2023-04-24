@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/camera_nav_graph" app:startDestination="@+id/permissionsFragment">
+    <fragment android:label="Permission" android:name="com.topstep.fitcloud.pro.ui.camera.PermissionFragment" android:id="@+id/permissionsFragment">
+        <action android:id="@+id/toCamera" app:destination="@+id/cameraFragment" app:popUpTo="@+id/permissionsFragment" app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:label="Camera" android:name="com.topstep.fitcloud.pro.ui.camera.CameraFragment" android:id="@+id/cameraFragment">
+        <action android:id="@+id/toPermission" app:destination="@+id/permissionsFragment" app:popUpTo="@+id/cameraFragment" app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

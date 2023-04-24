@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding">
+    <TextView android:textColor="?android:attr/textColorSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/auth_code_help_des1"/>
+    <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_des2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp"/>
+    <TextView android:textColor="?android:attr/textColorSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/auth_code_help_des3"/>
+</LinearLayout>

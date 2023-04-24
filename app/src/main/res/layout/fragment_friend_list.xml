@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:menu="@menu/menu_friend_list" app:title="@string/friends_module" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.topstep.fitcloud.pro.ui.widget.LoadingView android:id="@+id/loading_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/empty_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_friends_add_friend_tips"/>
+            <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/friends_add_friend_tips" style="@style/Widget.FitCloudPro.ContentPadding.Horizontal"/>
+            <Button android:id="@+id/btn_add" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/friends_add_friend" android:layout_marginStart="56dp" android:layout_marginEnd="56dp" style="@style/Widget.FitCloudPro.Button.Unelevated.Large"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:paddingTop="22dp" android:paddingBottom="22dp" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/Widget.FitCloudPro.ContentPadding.Horizontal">
+    <TextView android:textAppearance="?attr/textAppearanceHeadline6" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/tv_ecg_tips_view3_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ecg_tips_view_title2"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+        <com.github.kilnn.tool.widget.DotView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" app:dot_color="?attr/colorPrimary" app:dot_size="6dp"/>
+        <TextView android:textAppearance="?attr/textAppearanceBody2" android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_ecg_tips_view3_image_span" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ecg_tips_view3_text1" android:layout_marginStart="8dp"/>
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/ic_ecg_tips_img5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp"/>
+</LinearLayout>

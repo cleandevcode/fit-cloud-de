@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/assist_option" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.PreferenceGroup">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_device_info" android:text="@string/assist_device_info" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_local_dfu" android:text="@string/assist_local_dfu" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_ui_info" android:text="@string/assist_request_ui_info" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_sleep_raw" android:text="@string/assist_request_sleep_raw" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_assist_info" android:text="@string/assist_request_assist_info" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_weather" android:text="@string/weather_push" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_log" android:text="@string/assist_log" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

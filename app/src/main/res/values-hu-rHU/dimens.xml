@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dialog_device_connect_progress_dot_margin">24dp</dimen>
+</resources>

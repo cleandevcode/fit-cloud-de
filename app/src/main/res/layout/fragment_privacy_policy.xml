@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:menu="@menu/menu_privacy_police" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <com.github.kilnn.tool.widget.WebViewWrapper android:id="@+id/web_view_wrapper" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/layout_bottom" android:layout_below="@+id/toolbar" app:text_error_des="@string/tip_webview_error"/>
+    <FrameLayout android:id="@+id/layout_bottom" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/Widget.FitCloudPro.ContentPadding.Horizontal">
+        <Button android:textColor="?attr/colorPrimary" android:layout_gravity="center" android:id="@+id/btn_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="176dp" android:text="@string/privacy_policy_stop_auth" app:backgroundTint="?attr/colorNegative" style="@style/Widget.FitCloudPro.Button.Unelevated.Round"/>
+    </FrameLayout>
+</RelativeLayout>

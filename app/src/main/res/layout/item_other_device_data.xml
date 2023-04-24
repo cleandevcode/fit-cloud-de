@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingStart="24dp" style="@style/Widget.FitCloudPro.PreferenceBase">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_action">
+        <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_name" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:textAppearance="?attr/textAppearanceCaption" android:id="@+id/tv_address" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <Button android:id="@+id/btn_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/device_action_connect" android:layout_centerVertical="true" android:layout_alignParentEnd="true" android:backgroundTint="?attr/colorWarning" style="@style/Widget.FitCloudPro.Button.Unelevated.Round.Small"/>
+</RelativeLayout>

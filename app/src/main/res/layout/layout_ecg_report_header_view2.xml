@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <TableLayout android:id="@+id/layout_user_info_column1" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/layout_user_info_column2" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <TableRow android:gravity="end">
+                <TextView android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:gravity="end" android:id="@+id/text_name" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </TableRow>
+            <TableRow android:gravity="end">
+                <TextView android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:gravity="end" android:id="@+id/text_sex" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_sex" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </TableRow>
+            <TableRow android:gravity="end">
+                <TextView android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:gravity="end" android:id="@+id/text_age" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_age" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </TableRow>
+        </TableLayout>
+        <TableLayout android:id="@+id/layout_user_info_column2" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/layout_user_info_column1" app:layout_constraintTop_toTopOf="0">
+            <TableRow>
+                <TextView android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:gravity="end" android:id="@+id/text_height" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_height" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:gravity="end" android:id="@+id/text_weight" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_weight" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:gravity="end" android:id="@+id/text_hr" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_hr" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </TableRow>
+        </TableLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <TextView android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:id="@+id/text_result" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_result" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_result_des" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

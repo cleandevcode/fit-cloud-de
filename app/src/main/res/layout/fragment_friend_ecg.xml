@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_content_bg" android:background="@drawable/ic_health_page_bg" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/ecg_module" style="@style/Widget.FitCloudPro.Toolbar.OnPrimarySurface"/>
+        <com.topstep.fitcloud.pro.ui.widget.LoadingView android:id="@+id/loading_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include android:id="@+id/layout_detail" layout="@layout/layout_ecg_detail"/>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

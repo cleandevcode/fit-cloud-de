@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/dial_component_nav_graph" app:startDestination="@+id/listFragment">
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.dial.component.DialComponentListFragment" android:id="@+id/listFragment">
+        <action android:id="@+id/toEdit" app:destination="@+id/editFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.dial.component.DialComponentEditFragment" android:id="@+id/editFragment">
+        <argument android:name="position" app:argType="integer"/>
+    </fragment>
+</navigation>

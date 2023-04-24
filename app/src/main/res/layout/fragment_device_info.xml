@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/assist_option" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding">
+        <TextView android:id="@+id/tv_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_copy"/>
+        <Button android:id="@+id/btn_copy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/assist_action_copy" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Outlined.Round.Small"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

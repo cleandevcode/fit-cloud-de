@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:paddingStart="?attr/dialogPreferredPadding" android:paddingEnd="?attr/dialogPreferredPadding">
+    <ImageView android:id="@+id/permissionIcon" android:layout_width="24dp" android:layout_height="24dp" android:layout_centerVertical="true" android:layout_alignParentStart="true" app:tint="?attr/colorPrimary"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_alignWithParentIfMissing="true" android:animateLayoutChanges="true" android:layout_marginStart="8dp" android:layout_toStartOf="@+id/permissionMore" android:layout_toEndOf="@+id/permissionIcon">
+        <LinearLayout android:orientation="vertical" android:id="@+id/permissionInfo" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?attr/textAppearanceSubtitle2" android:layout_gravity="center_vertical" android:id="@+id/permissionText" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textAppearance="?attr/textAppearanceCaption" android:id="@+id/permissionDes" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView android:textAppearance="?attr/textAppearanceCaption" android:layout_gravity="center_vertical" android:id="@+id/permissionExplain" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <ImageView android:id="@+id/permissionMore" android:background="?attr/selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_baseline_help_outline_24" android:layout_centerInParent="true" android:layout_alignParentEnd="true"/>
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/friends_add_friend" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <include android:id="@+id/item_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" layout="@layout/item_friend_list"/>
+            <include android:id="@+id/item_mark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" layout="@layout/layout_friend_add_mark"/>
+            <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/friends_add_msg" style="@style/Widget.FitCloudPro.ContentMargin.Horizontal"/>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:counterEnabled="true" app:counterMaxLength="100" app:endIconMode="clear_text" style="@style/Widget.FitCloudPro.ContentMargin.Horizontal">
+                <EditText android:id="@+id/edit_msg" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button android:id="@+id/btn_add" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/friends_send_request" android:layout_marginStart="32dp" android:layout_marginEnd="32dp" style="@style/Widget.FitCloudPro.Button.Unelevated.Large"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

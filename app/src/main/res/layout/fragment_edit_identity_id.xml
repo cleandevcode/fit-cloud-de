@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/user_info_id" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/user_info_id_tips1"/>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/input_identity_id" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="@string/user_info_id" app:endIconMode="clear_text" app:helperText="@string/user_info_id_tips2">
+                <EditText android:id="@+id/edit_identity_id" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="0dp" android:paddingEnd="0dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button android:id="@+id/btn_save" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/action_save" style="@style/Widget.FitCloudPro.Button.Unelevated.Large"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

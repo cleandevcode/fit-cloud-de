@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" style="@style/Widget.FitCloudPro.Toolbar">
+        <com.google.android.material.tabs.TabLayout android:id="@+id/tab_layout" style="@style/Widget.FitCloudPro.TabLayout.OnToolbar"/>
+    </com.google.android.material.appbar.MaterialToolbar>
+    <com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout android:id="@+id/layout_location_service" android:minHeight="0dp" app:preferenceDivider="@drawable/shape_app_divider" app:showPreferenceDividers="bottom" style="@style/Widget.FitCloudPro.PreferenceBase">
+        <TextView android:textColor="?attr/colorError" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_dfu_tips_location_service" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_enable_location_service"/>
+        <Button android:id="@+id/btn_enable_location_service" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_turn_on" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Outlined.Round.Small"/>
+    </com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout>
+    <androidx.viewpager2.widget.ViewPager2 android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</LinearLayout>

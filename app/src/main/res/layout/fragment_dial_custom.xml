@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/ds_dial_custom" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout android:id="@+id/layout_location_service" android:minHeight="0dp" app:preferenceDivider="@drawable/shape_app_divider" app:showPreferenceDividers="bottom" style="@style/Widget.FitCloudPro.PreferenceBase">
+        <TextView android:textColor="?attr/colorError" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_dfu_tips_location_service" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_enable_location_service"/>
+        <Button android:id="@+id/btn_enable_location_service" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_turn_on" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Outlined.Round.Small"/>
+    </com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout>
+    <com.topstep.fitcloud.pro.ui.widget.LoadingView android:id="@+id/loading_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.topstep.fitcloud.sdk.v2.utils.dial.DialView android:id="@+id/dial_view" android:layout_width="240dp" android:layout_height="240dp" app:dv_background_scale_type="center_crop"/>
+            <Button android:id="@+id/btn_create_dial" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:minWidth="156dp" app:cornerRadius="64dp"/>
+            <com.google.android.material.tabs.TabLayout android:id="@+id/tab_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:tabGravity="center" app:tabIndicatorFullWidth="false" app:tabMode="fixed"/>
+            <androidx.viewpager2.widget.ViewPager2 android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

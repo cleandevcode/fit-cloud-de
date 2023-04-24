@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/wh_settings" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.PreferenceGroup">
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_enabled" app:preferenceTitle="@string/wh_women_health" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_detail" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_mode_menstruation" app:preferenceImageTint="?attr/colorPrimary" app:preferenceTitle="@string/wh_mode_menstruation" app:showPreferenceIndicator="true" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Image"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_mode_pregnancy_prepare" app:preferenceImageTint="?attr/colorPrimary" app:preferenceTitle="@string/wh_mode_pregnancy_prepare" app:showPreferenceIndicator="true" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Image"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_mode_pregnancy" app:preferenceImageTint="?attr/colorPrimary" app:preferenceTitle="@string/wh_mode_pregnancy" app:showPreferenceIndicator="true" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Image"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

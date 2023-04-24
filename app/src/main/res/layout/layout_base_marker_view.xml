@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/shape_healthy_marker_view_bg" android:padding="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?attr/colorPrimary" android:id="@+id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:textAppearance="?attr/textAppearanceCaption" android:id="@+id/tv_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="4dp"/>
+    <TextView android:textAppearance="?attr/textAppearanceCaption" android:id="@+id/tv_value2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="4dp"/>
+</LinearLayout>

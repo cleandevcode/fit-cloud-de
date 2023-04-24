@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_facebook" app:preferenceTitle="@string/ds_facebook" app:preferenceTitleDrawableStart="@drawable/ic_item_app_facebook" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+    <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_twitter" app:preferenceTitle="@string/ds_twitter" app:preferenceTitleDrawableStart="@drawable/ic_item_app_twitter" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+    <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_whatsapp" app:preferenceTitle="@string/ds_whatsapp" app:preferenceTitleDrawableStart="@drawable/ic_item_app_whatsapp" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+    <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_skype" app:preferenceTitle="@string/ds_skype" app:preferenceTitleDrawableStart="@drawable/ic_item_app_skype" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+    <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_instagram" app:preferenceTitle="@string/ds_instagram" app:preferenceTitleDrawableStart="@drawable/ic_item_app_instagram" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+    <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_qq" app:preferenceTitle="@string/ds_qq" app:preferenceTitleDrawableStart="@drawable/ic_item_app_qq" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+    <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_wechat" app:preferenceTitle="@string/ds_wechat" app:preferenceTitleDrawableStart="@drawable/ic_item_app_wechat" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+</LinearLayout>

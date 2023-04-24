@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/img_avatar" android:layout_width="56dp" android:layout_height="56dp" android:scaleType="fitCenter" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:layout_toStartOf="@+id/img_avatar_arrow" android:layout_toEndOf="@+id/img_avatar">
+        <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_nick_name" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textAppearance="?attr/textAppearanceCaption" android:id="@+id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/img_avatar_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_section_arrow_next" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+</RelativeLayout>

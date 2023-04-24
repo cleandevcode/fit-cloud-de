@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_friends_add_friend" android:id="@+id/menu_add_friend" android:title="@string/friends_add_friend" app:iconTint="?attr/colorControlNormal" app:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/ic_friends_msg1" android:id="@+id/menu_friend_msg" android:title="@string/friends_msg" app:showAsAction="always"/>
+</menu>

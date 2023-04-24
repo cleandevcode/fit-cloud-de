@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevInfor>
+<SinaWeibo Id="1" SortId="1" AppKey="4065445763" AppSecret="7e7bdfc779e0cc04c8f56ad25f681281" ShareByAppClient="true" Enable="true" RedirectUrl="http://mob.com/" />
+<TencentWeibo Enable="false" />
+<Douban Enable="false" />
+<QZone Enable="false" />
+<Renren Enable="false" />
+<KaiXin Enable="false" />
+<Facebook Id="5" SortId="5" OfficialVersion="14.1.0" FaceBookLoginProtocolScheme="fb263170919132843" FaceBookClientToken="b80f57aa50643f68758bb2316e1ab77f" ShareByAppClient="true" Enable="true" ConsumerKey="263170919132843" ConsumerSecret="0076a242cee08c3da24eff5f6ae97a36" RedirectUrl="https://mob.com/" />
+<Twitter Id="6" SortId="6" ShareByAppClient="true" Enable="true" ConsumerKey="n5J26rg2nN5oLgwyQk3rKNd3E" ConsumerSecret="sWRlgw5wpxnQ9vQFqzK5KRqwYpYoWYXSVKxPmpTKMDHWJ112pH" CallbackUrl="http://mob.com/" />
+<Evernote Enable="false" />
+<FourSquare Enable="false" />
+<GooglePlus Enable="false" />
+<Instagram Id="7" SortId="7" Enable="true" ClientId="e741ea0b61084302994b3af7d73b1d09" ClientSecret="d70c3b5ea7934400ae68fe6b8faf9eee" RedirectUri="http://mob.com/" />
+<LinkedIn Enable="false" />
+<Tumblr Enable="false" />
+<Email Enable="false" />
+<ShortMessage Enable="false" />
+<Wechat Id="3" SortId="3" AppId="wx75e4236159efb3a0" AppSecret="939dd840732edd58dae3fc04ed515a08" BypassApproval="false" Enable="true" />
+<WechatMoments Id="4" SortId="4" AppId="wx75e4236159efb3a0" AppSecret="939dd840732edd58dae3fc04ed515a08" BypassApproval="false" Enable="true" />
+<QQ Id="2" SortId="2" AppId="1106276369" AppKey="xclTpj95vB5H2fna" ShareByAppClient="true" BypassApproval="false" Enable="true" />
+<Instapaper Enable="false" />
+<Pocket Enable="false" />
+<YouDao Enable="false" />
+<Pinterest Enable="false" />
+<Flickr Enable="false" />
+<Dropbox Enable="false" />
+<VKontakte Enable="false" />
+<WechatFavorite Enable="false" />
+<Yixin Enable="false" />
+<YixinMoments Enable="false" />
+<Mingdao Enable="false" />
+<Line Enable="false" />
+<WhatsApp Enable="false" />
+<KakaoTalk Enable="false" />
+<KakaoStory Enable="false" />
+<FacebookMessenger Enable="false" />
+<Alipay Enable="false" />
+<AlipayMoments Enable="false" />
+<Dingding Enable="false" />
+<Youtube Enable="false" />
+<Meipai Enable="false" />
+<Telegram Enable="false" />
+<Cmcc Enable="false" />
+<Reddit Enable="false" />
+<Telecom Enable="false" />
+<Accountkit Enable="false" />
+<Douyin Enable="false" />
+<Wework Enable="false" />
+<HWAccount Enable="false" />
+<Oasis Enable="false" />
+<XMAccount Enable="false" />
+<SnapChat Enable="false" />
+<Kuaishou Enable="false" />
+<Littleredbook Enable="false" />
+<Watermelonvideo Enable="false" />
+<Tiktok Enable="false" />
+<Taptap Enable="false" />
+</DevInfor>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/img_avatar" android:layout_width="48dp" android:layout_height="48dp" android:scaleType="fitCenter" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:layout_toStartOf="@+id/layout_action" android:layout_toEndOf="@+id/img_avatar">
+        <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_nick_name" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLines="2"/>
+        <TextView android:textAppearance="?attr/textAppearanceCaption" android:id="@+id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/layout_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+        <Button android:textColor="?android:attr/textColorPrimary" android:id="@+id/btn_reject" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="64dp" android:text="@string/friends_reject" style="@style/Widget.FitCloudPro.Button.Outlined.Round.Small"/>
+        <Button android:id="@+id/btn_accept" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="64dp" android:text="@string/friends_accept" android:layout_marginStart="8dp" style="@style/Widget.FitCloudPro.Button.Outlined.Round.Small"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/settings_module" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/btn_sign_out" android:layout_below="@+id/toolbar">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.PreferenceGroup">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_account_manage" app:preferenceTitle="@string/account_manage" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceLinearLayout android:orientation="vertical" android:id="@+id/item_cloud_sync" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.PreferenceView">
+                    <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cloud_sync_module"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:id="@+id/tv_last_sync_time" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:id="@+id/tv_new_data_count" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </com.github.kilnn.tool.widget.preference.PreferenceLinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_bg_run_settings" android:text="@string/bg_run_settings_module" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_connect_help" android:text="@string/connect_help" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_notification_help" android:text="@string/ds_notification_help" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_theme" app:preferenceTitle="@string/settings_theme_title" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_version_update" app:preferenceTitle="@string/version_update_module" app:preferenceType="type_image" style="@style/Widget.FitCloudPro.PreferenceView.Item"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_about" android:text="@string/about_us_module" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:id="@+id/btn_sign_out" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/account_sign_out" android:layout_alignParentBottom="true" android:layout_marginStart="32dp" android:layout_marginEnd="32dp" style="@style/Widget.FitCloudPro.Button.Outlined.Large"/>
+</RelativeLayout>

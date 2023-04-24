@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.github.kilnn.tool.widget.preference.PreferenceLinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" app:preferenceIndicator="@drawable/ic_section_arrow_next" app:showPreferenceIndicator="true" style="@style/Widget.FitCloudPro.ContentPadding">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/img_sport_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_sport_type_0x01" android:layout_centerVertical="true" android:layout_marginEnd="8dp" android:layout_alignParentStart="true" app:tint="?attr/colorOnSurface"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?attr/textAppearanceBody1" android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_date" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:textAppearance="?attr/textAppearanceBody1" android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp"/>
+                <ImageView android:id="@+id/img_flag_wristband" android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_sport_band" android:layout_marginStart="8dp" app:tint="?attr/colorOnSurface"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <LinearLayout android:gravity="start|center_vertical" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageView android:id="@+id/img_main_attr" android:layout_width="20dp" android:layout_height="20dp" app:tint="?attr/colorOnSurface"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:id="@+id/tv_main_attr" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:id="@+id/tv_main_attr_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4dp"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start|center_vertical" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_sport_data_duration" app:tint="?attr/colorOnSurface"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:gravity="center" android:id="@+id/tv_duration" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start|center_vertical" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_sport_data_calorie" app:tint="?attr/colorOnSurface"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:gravity="center" android:id="@+id/tv_calories" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit_k_calorie" android:layout_marginStart="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.github.kilnn.tool.widget.preference.PreferenceLinearLayout>
+    <View android:id="@+id/view_divider" android:background="?attr/dividerVertical" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginStart="44dp"/>
+</LinearLayout>

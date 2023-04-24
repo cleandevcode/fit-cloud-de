@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/unit_module" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/toolbar">
+        <LinearLayout style="@style/Widget.FitCloudPro.PreferenceGroup">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:text="@string/unit_set_length" style="@style/Widget.FitCloudPro.PreferenceGroupDes"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_length_metric" android:text="@string/unit_length_metric" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_length_imperial" android:text="@string/unit_length_imperial" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:text="@string/unit_set_weight" style="@style/Widget.FitCloudPro.PreferenceGroupDes"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_weight_metric" android:text="@string/unit_weight_metric" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_weight_imperial" android:text="@string/unit_weight_imperial" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_temperature" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:text="@string/unit_set_temperature" style="@style/Widget.FitCloudPro.PreferenceGroupDes"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_temperature_centigrade" android:text="@string/unit_temperature_centigrade" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_temperature_fahrenheit" android:text="@string/unit_temperature_fahrenheit" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

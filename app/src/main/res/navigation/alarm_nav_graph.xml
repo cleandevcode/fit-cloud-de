@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" app:startDestination="@+id/alarmListFragment">
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.alarm.AlarmListFragment" android:id="@+id/alarmListFragment">
+        <action android:id="@+id/toAlarmDetail" app:destination="@+id/alarmDetailFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.alarm.AlarmDetailFragment" android:id="@+id/alarmDetailFragment">
+        <argument android:name="position" app:argType="integer"/>
+    </fragment>
+</navigation>

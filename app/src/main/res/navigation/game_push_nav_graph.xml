@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/game_push_nav_graph" app:startDestination="@+id/gamePacketFragment">
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.game.push.GamePacketParentFragment" android:id="@+id/gamePacketFragment">
+        <action android:id="@+id/toDetail" app:destination="@+id/gameDetailFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.game.push.GameDetailFragment" android:id="@+id/gameDetailFragment">
+        <argument android:name="type" app:argType="integer"/>
+    </fragment>
+</navigation>

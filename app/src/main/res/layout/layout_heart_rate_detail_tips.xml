@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:divider="?attr/dividerVertical" android:showDividers="middle">
+    <LinearLayout android:orientation="vertical" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/heart_rate_alert1"/>
+        <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/heart_rate_alert2"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/heart_rate_alert3"/>
+        <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/heart_rate_alert4"/>
+        <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/heart_rate_alert5"/>
+    </LinearLayout>
+</LinearLayout>

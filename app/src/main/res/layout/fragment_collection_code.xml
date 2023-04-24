@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/ds_collection_code" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <com.topstep.fitcloud.pro.ui.widget.LoadingView android:id="@+id/loading_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding.Vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_payment_method" style="@style/Widget.FitCloudPro.PreferenceGroupDes"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_qq" android:text="@string/ds_qq" app:drawableStartCompat="@drawable/ic_item_app_qq" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_wechat" android:text="@string/ds_wechat" app:drawableStartCompat="@drawable/ic_item_app_wechat" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_alipay" android:text="@string/ds_alipay" app:drawableStartCompat="@drawable/ic_item_app_alipay" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_paypal" android:text="@string/ds_paypal" app:drawableStartCompat="@drawable/ic_item_app_paypal" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_paytm" android:text="@string/ds_paytm" app:drawableStartCompat="@drawable/ic_item_app_paytm" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_phone_pe" android:text="@string/ds_phone_pe" app:drawableStartCompat="@drawable/ic_item_app_phone_pe" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_gpay" android:text="@string/ds_gpay" app:drawableStartCompat="@drawable/ic_item_app_gpay" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_bhim" android:text="@string/ds_bhim" app:drawableStartCompat="@drawable/ic_item_app_bhim" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ds_collection_code_tips" style="@style/Widget.FitCloudPro.PreferenceGroupDes"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

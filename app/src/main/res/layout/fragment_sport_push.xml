@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/ds_sport_push" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout android:id="@+id/layout_location_service" android:minHeight="0dp" app:preferenceDivider="@drawable/shape_app_divider" app:showPreferenceDividers="bottom" style="@style/Widget.FitCloudPro.PreferenceBase">
+        <TextView android:textColor="?attr/colorError" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_dfu_tips_location_service" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_enable_location_service"/>
+        <Button android:id="@+id/btn_enable_location_service" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_turn_on" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Outlined.Round.Small"/>
+    </com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.topstep.fitcloud.pro.ui.widget.LoadingView android:id="@+id/loading_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/Widget.FitCloudPro.ContentPadding.Vertical">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view_category" android:layout_width="120dp" android:layout_height="match_parent"/>
+            <View android:background="?attr/dividerHorizontal" android:layout_width="1dp" android:layout_height="match_parent"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view_item" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

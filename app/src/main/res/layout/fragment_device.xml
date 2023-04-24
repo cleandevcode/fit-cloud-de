@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.github.kilnn.tool.widget.FitPaddingMaterialToolbar android:id="@+id/toolbar" app:navigationIcon="@null" app:title="@string/device_module" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:id="@+id/scroll_view" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:id="@+id/layout_content" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.PreferenceGroup">
+            <FrameLayout android:tag="ignoreParentState" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include android:id="@+id/item_device_bind" layout="@layout/layout_device_bind"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout android:id="@+id/item_device_info" style="@style/Widget.FitCloudPro.PreferenceView">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@+id/img_device">
+                        <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/tv_device_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+                        <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_device_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp"/>
+                        <com.topstep.fitcloud.pro.ui.widget.BatteryImageView android:id="@+id/battery_view" android:layout_width="28dp" android:layout_height="14dp" android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                    <ImageView android:id="@+id/img_device" android:layout_width="61dp" android:layout_height="61dp" android:src="@drawable/ic_device_default" android:layout_centerVertical="true" android:layout_marginStart="24dp" android:layout_marginEnd="8dp" android:layout_alignParentEnd="true"/>
+                </com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout>
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_collection_code" android:text="@string/ds_collection_code" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_business_card" android:text="@string/ds_business_card" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_nucleic_acid_code" android:text="@string/ds_nucleic_acid_code" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_notification" android:text="@string/ds_notification" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_alarm" app:preferenceTitle="@string/ds_alarm" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_sedentary" app:preferenceSummary="@string/ds_sedentary_des" app:preferenceTitle="@string/ds_sedentary" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_drink_water" app:preferenceSummary=" " app:preferenceTitle="@string/ds_drink_water" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_protection_reminder" app:preferenceTitle="@string/ds_protection_reminder" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_dial_push" android:text="@string/ds_dial_library" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_dial_component" android:text="@string/ds_dial_local" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_game_push" android:text="@string/ds_game_push" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_sport_push" android:text="@string/ds_sport_push" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_weather" app:preferenceTitle="@string/weather_push" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_song_push" android:text="@string/ds_song_push" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_turn_wrist_lighting" app:preferenceTitle="@string/ds_turn_wrist_lighting" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_strengthen_test" app:preferenceTitle="@string/ds_strengthen_test" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_health_monitor" app:preferenceTitle="@string/ds_health_monitor" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_screen" android:text="@string/ds_screen_setting" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_vibrate" app:preferenceTitle="@string/ds_vibration_intensity" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_find_device" app:preferenceSummary="@string/ds_find_device_des" app:preferenceTitle="@string/ds_find_device" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_wear_way" app:preferenceTitle="@string/ds_wear_way" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_hour_style" app:preferenceTitle="@string/ds_hour_style" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_page_config" android:text="@string/ds_page_config" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_contacts" android:text="@string/ds_contacts" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_shake_take_photos" android:text="@string/ds_shake_take_photos" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_reset" android:text="@string/ds_reset" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_version" app:preferenceTitle="@string/ds_version" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

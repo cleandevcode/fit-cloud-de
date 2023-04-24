@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/ds_screen_setting" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/layout_content" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding.Vertical">
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_brightness" app:preferenceTitle="@string/ds_screen_brightness" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_bright_duration" app:preferenceTitle="@string/ds_screen_bright_duration" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_turn_wrist_bright_duration" app:preferenceTitle="@string/ds_screen_turn_wrist_bright_duration" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_long_time_bright_duration" app:preferenceTitle="@string/ds_screen_long_time_bright_duration" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_always_bright" app:preferenceTitle="@string/ds_screen_always_bright" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

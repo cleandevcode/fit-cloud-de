@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="32dp" android:layout_above="@+id/btn_bind" android:layout_below="@+id/toolbar" android:layout_marginStart="@dimen/content_padding_horizontal" android:layout_marginEnd="@dimen/content_padding_horizontal">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_gravity="center_horizontal" android:background="@drawable/shape_qrcode_add_background" android:padding="16dp" android:layout_width="224dp" android:layout_height="224dp">
+                <ImageView android:id="@+id/image_add" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_qrcode_add" android:scaleType="centerInside"/>
+                <ImageView android:id="@+id/image_qr_code" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerInside"/>
+            </FrameLayout>
+            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/qr_code_bind_step_title"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/qr_code_bind_step1"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/qr_code_bind_step2"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/qr_code_bind_step3"/>
+            <Button android:layout_gravity="end" android:id="@+id/btn_help" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/qr_code_bind_help" style="@style/Widget.FitCloudPro.Button.Text"/>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:enabled="false" android:id="@+id/btn_bind" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="32dp" android:text="@string/qr_code_bind" android:layout_alignParentBottom="true" style="@style/Widget.FitCloudPro.Button.Unelevated.Large"/>
+</RelativeLayout>

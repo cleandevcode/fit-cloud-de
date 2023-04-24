@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/version_hardware_update" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout android:id="@+id/layout_location_service" android:minHeight="0dp" app:preferenceDivider="@drawable/shape_app_divider" app:showPreferenceDividers="bottom" style="@style/Widget.FitCloudPro.PreferenceBase">
+        <TextView android:textColor="?attr/colorError" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_dfu_tips_location_service" android:layout_centerVertical="true" android:layout_toStartOf="@+id/btn_enable_location_service"/>
+        <Button android:id="@+id/btn_enable_location_service" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_turn_on" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Widget.FitCloudPro.Button.Outlined.Round.Small"/>
+    </com.github.kilnn.tool.widget.preference.PreferenceRelativeLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding">
+            <com.topstep.fitcloud.pro.ui.widget.UpgradeProgressLayout android:layout_gravity="center_horizontal" android:id="@+id/layout_upgrade_progress" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <TextView android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/version_latest_version_code"/>
+                <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_version" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <Button android:layout_gravity="center_horizontal" android:id="@+id/btn_upgrade" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:minWidth="96dp" android:text="@string/version_upgrade" style="@style/Widget.FitCloudPro.Button.Unelevated.Round"/>
+            <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/version_note_title"/>
+            <TextView android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/version_note_hardware1" android:layout_marginStart="16dp"/>
+            <TextView android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/version_note_hardware2" android:layout_marginStart="16dp"/>
+            <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/version_update_content"/>
+            <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginStart="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/ecg_module" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.topstep.fitcloud.pro.ui.widget.EcgGridView android:id="@+id/ecg_grid_view" android:layout_width="match_parent" android:layout_height="wrap_content" app:grid_bold_line_width="2px" app:grid_line_color="@color/ecg_grid_line_color" app:grid_line_width="1px" app:grid_vertical_count="40"/>
+                <com.topstep.fitcloud.pro.ui.widget.EcgView android:id="@+id/ecg_view" android:layout_width="match_parent" android:layout_height="wrap_content" app:ecg_grid_vertical_count="40" app:ecg_line_color="@color/ecg_line_color" app:ecg_line_width="1dp"/>
+                <TextView android:id="@+id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginStart="8dp"/>
+                <LinearLayout android:layout_gravity="end|bottom" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:layout_marginEnd="8dp">
+                    <TextView android:id="@+id/tv_speed" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tv_amplitude" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp"/>
+                </LinearLayout>
+            </FrameLayout>
+            <RelativeLayout android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding.Horizontal">
+                <ImageView android:id="@+id/img_help_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_baseline_info_24" android:layout_centerVertical="true" android:contentDescription="@string/ecg_help" android:layout_alignParentEnd="true" app:tint="?attr/colorNegative"/>
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <Button android:id="@+id/btn_start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="128dp" android:text="@string/healthy_start_test" style="@style/Widget.FitCloudPro.Button.Outlined.HealthStop"/>
+                    <Button android:id="@+id/btn_stop" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="128dp" style="@style/Widget.FitCloudPro.Button.Outlined.HealthStop"/>
+                    <ProgressBar android:layout_gravity="center" android:id="@+id/progress_bar" android:visibility="gone" android:layout_width="24dp" android:layout_height="24dp" style="@style/Widget.AppCompat.ProgressBar"/>
+                </FrameLayout>
+            </RelativeLayout>
+            <com.google.android.material.divider.MaterialDivider android:layout_width="match_parent" android:layout_height="wrap_content" app:dividerColor="@color/ecg_grid_line_color" app:dividerThickness="1px"/>
+            <FrameLayout android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:layout_gravity="center" android:id="@+id/empty_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tip_current_no_data"/>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

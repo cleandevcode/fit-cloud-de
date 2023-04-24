@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" app:startDestination="@+id/signInFragment">
+    <fragment android:name="com.topstep.fitcloud.pro.ui.auth.SignInFragment" android:id="@+id/signInFragment">
+        <action android:id="@+id/toSignUp" app:destination="@+id/signUpFragment"/>
+        <action android:id="@+id/toResetPwd" app:destination="@+id/resetPwdFragment"/>
+        <action android:id="@+id/to_fill_user" app:destination="@+id/fillUserFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.auth.SignUpFragment" android:id="@+id/signUpFragment">
+        <action android:id="@+id/to_fill_user" app:destination="@+id/fillUserFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.auth.ResetPwdFragment" android:id="@+id/resetPwdFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.auth.FillUserFragment" android:id="@+id/fillUserFragment">
+        <argument android:name="parcelArgs" app:argType="com.topstep.fitcloud.pro.model.auth.FillUserInfo" app:nullable="false"/>
+        <action android:id="@+id/toExerciseGoal" app:destination="@+id/exerciseGoalFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.ExerciseGoalFragment" android:id="@+id/exerciseGoalFragment">
+        <argument android:name="isAfterFillUser" app:argType="boolean"/>
+        <action android:id="@+id/toDeviceSpecify" app:destination="@+id/deviceSpecifyFragment"/>
+        <action android:id="@+id/toDeviceBind" app:destination="@+id/deviceBindFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.bind.DeviceSpecifyFragment" android:id="@+id/deviceSpecifyFragment">
+        <argument android:name="isAfterFillUser" app:argType="boolean"/>
+        <action android:id="@+id/toConnectHelp" app:destination="@+id/connectHelpFragment"/>
+        <action android:id="@+id/toBgRunSettings" app:destination="@+id/bgRunSettingsFragment"/>
+        <action android:id="@+id/toDeviceBind" app:destination="@+id/deviceBindFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.bind.DeviceBindFragment" android:id="@+id/deviceBindFragment">
+        <argument android:name="isAfterFillUser" app:argType="boolean"/>
+        <argument android:name="nameSpecify" app:argType="string" app:nullable="true"/>
+        <action android:id="@+id/toConnectHelp" app:destination="@+id/connectHelpFragment"/>
+        <action android:id="@+id/toBgRunSettings" app:destination="@+id/bgRunSettingsFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.bind.ConnectHelpFragment" android:id="@+id/connectHelpFragment"/>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.settings.bgrun.BgRunSettingsFragment" android:id="@+id/bgRunSettingsFragment"/>
+</navigation>

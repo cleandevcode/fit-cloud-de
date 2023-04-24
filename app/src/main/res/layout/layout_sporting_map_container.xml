@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/layout_map_mode" android:background="#99000000" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?attr/textAppearanceHeadline4" android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_map_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_map_distance_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit_km" app:layout_constraintBaseline_toBaselineOf="@+id/tv_map_distance" app:layout_constraintStart_toEndOf="@+id/tv_map_distance"/>
+        <LinearLayout android:id="@+id/layout_map_data" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/tv_map_distance">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_pace"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_map_pace" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_map_pace_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_unit_min_per_km"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_use_time"/>
+                <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_map_duration" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_consumes"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_map_calorie" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit_k_calorie"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/img_map_progress" android:background="@drawable/ic_sport_progress_bar2" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/clip_sport_progress_bar" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/layout_map_data"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView android:layout_gravity="end|bottom" android:id="@+id/img_change_mode_to_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:src="@drawable/ic_sport_change_mode_to_normal" android:layout_marginEnd="16dp"/>
+</FrameLayout>

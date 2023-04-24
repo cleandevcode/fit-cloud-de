@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/ds_business_card" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <com.topstep.fitcloud.pro.ui.widget.LoadingView android:id="@+id/loading_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding.Vertical">
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_wechat" android:text="@string/ds_wechat" app:drawableStartCompat="@drawable/ic_item_app_wechat" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_qq" android:text="@string/ds_qq" app:drawableStartCompat="@drawable/ic_item_app_qq" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_facebook" android:text="@string/ds_facebook" app:drawableStartCompat="@drawable/ic_item_app_facebook" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_whatsapp" android:text="@string/ds_whatsapp" app:drawableStartCompat="@drawable/ic_item_app_whatsapp" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_twitter" android:text="@string/ds_twitter" app:drawableStartCompat="@drawable/ic_item_app_twitter" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_instagram" android:text="@string/ds_instagram" app:drawableStartCompat="@drawable/ic_item_app_instagram" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_line" android:text="@string/ds_line" app:drawableStartCompat="@drawable/ic_item_app_line" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_skype" android:text="@string/ds_skype" app:drawableStartCompat="@drawable/ic_item_app_skype" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_email" android:text="@string/ds_notification_email" app:drawableStartCompat="@drawable/ic_item_app_email" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_phone" android:text="@string/ds_phone" app:drawableStartCompat="@drawable/ic_item_app_phone" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+            <com.github.kilnn.tool.widget.preference.PreferenceTextView android:id="@+id/item_linkedin" android:text="@string/ds_linkedin" app:drawableStartCompat="@drawable/ic_item_app_linkedin" style="@style/Widget.FitCloudPro.PreferenceView.Text"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

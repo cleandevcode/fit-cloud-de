@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="?attr/colorSurface" app:cardCornerRadius="8dp" app:cardPreventCornerOverlap="false">
+    <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/img_arrow_left" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_baseline_keyboard_arrow_left_24" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+            <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:id="@+id/tv_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+            <ImageView android:id="@+id/img_arrow_right" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_baseline_keyboard_arrow_right_24" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <com.topstep.fitcloud.pro.ui.widget.HealthCalendarView android:id="@+id/calendar_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

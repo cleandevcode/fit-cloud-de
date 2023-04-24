@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.topstep.fitcloud.pro.ui.widget.LoadingView android:id="@+id/loading_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <TextView android:gravity="center" android:id="@+id/tv_tips" android:background="@drawable/shape_color_surface_secondary_corners_8dp" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/content_padding_vertical" android:layout_marginBottom="@dimen/content_padding_vertical" android:text="@string/ds_game_number_limit" android:layout_marginStart="@dimen/content_padding_horizontal" android:layout_marginEnd="@dimen/content_padding_horizontal"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

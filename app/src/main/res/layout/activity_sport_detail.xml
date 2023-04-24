@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" app:menu="@menu/menu_share" app:title="@string/sport_history_record" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:id="@+id/layout_user" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding">
+            <ImageView android:id="@+id/img_avatar" android:layout_width="48dp" android:layout_height="48dp" android:scaleType="fitCenter" android:layout_alignParentStart="true"/>
+            <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:id="@+id/tv_nick_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:layout_toEndOf="@+id/img_avatar"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/layout_content" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.google.android.material.tabs.TabLayout android:id="@+id/tab_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:tabIndicatorFullWidth="true" app:tabMode="fixed"/>
+            <androidx.viewpager2.widget.ViewPager2 android:id="@+id/view_pager" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <com.topstep.fitcloud.pro.ui.widget.LoadingView android:id="@+id/loading_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </FrameLayout>
+</LinearLayout>

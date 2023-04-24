@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@+id/preference_item_title_layout" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/preference_item_switch" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_toStartOf="@+id/preference_item_switch" android:layout_alignParentStart="true">
+        <TextView android:gravity="center_vertical" android:id="@+id/preference_item_title" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:gravity="center_vertical" android:id="@+id/preference_item_summary" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp"/>
+    </LinearLayout>
+    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/preference_item_switch" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+</merge>

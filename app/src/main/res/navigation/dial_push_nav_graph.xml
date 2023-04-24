@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/dial_push_nav_graph" app:startDestination="@+id/dialPacketFragment">
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.dial.push.DialPacketParentFragment" android:id="@+id/dialPacketFragment">
+        <action android:id="@+id/toDialCustom" app:destination="@+id/dialCustomFragment"/>
+    </fragment>
+    <fragment android:name="com.topstep.fitcloud.pro.ui.device.dial.push.custom.DialCustomFragment" android:id="@+id/dialCustomFragment"/>
+</navigation>

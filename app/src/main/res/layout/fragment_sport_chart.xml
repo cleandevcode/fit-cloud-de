@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true">
+                <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_avg_heart_rate"/>
+                <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_avg_heart_rate" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="end" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true">
+                <TextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_max_heart_rate"/>
+                <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/tv_max_heart_rate" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <com.topstep.fitcloud.pro.ui.sport.detail.HeartRateLineChart android:id="@+id/line_chart" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginTop="12dp"/>
+    </LinearLayout>
+    <LinearLayout android:padding="12dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.topstep.fitcloud.pro.ui.sport.detail.HeartRateCircleChart android:id="@+id/circle_chart" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:id="@+id/heart_rate_view1" android:background="@color/sport_heart_rate_warm_up" android:layout_width="18dp" android:layout_height="18dp" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_heart_rate_text1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_heart_rate_warm_up" android:layout_centerVertical="true" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" android:layout_toStartOf="@+id/tv_heart_rate_value1" android:layout_toEndOf="@+id/heart_rate_view1" android:layout_alignParentEnd="true"/>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_heart_rate_value1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                <View android:id="@+id/heart_rate_view2" android:background="@color/sport_heart_rate_hiit" android:layout_width="18dp" android:layout_height="18dp" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_heart_rate_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_heart_rate_hiit" android:layout_centerVertical="true" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" android:layout_toStartOf="@+id/tv_heart_rate_value2" android:layout_toEndOf="@+id/heart_rate_view2" android:layout_alignParentEnd="true"/>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_heart_rate_value2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                <View android:id="@+id/heart_rate_view3" android:background="@color/sport_heart_rate_aerobic" android:layout_width="18dp" android:layout_height="18dp" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_heart_rate_text3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_heart_rate_aerobic" android:layout_centerVertical="true" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" android:layout_toStartOf="@+id/tv_heart_rate_value3" android:layout_toEndOf="@+id/heart_rate_view3" android:layout_alignParentEnd="true"/>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_heart_rate_value3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                <View android:id="@+id/heart_rate_view4" android:background="@color/sport_heart_rate_anaerobic" android:layout_width="18dp" android:layout_height="18dp" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_heart_rate_text4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_heart_rate_anaerobic" android:layout_centerVertical="true" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" android:layout_toStartOf="@+id/tv_heart_rate_value4" android:layout_toEndOf="@+id/heart_rate_view4" android:layout_alignParentEnd="true"/>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_heart_rate_value4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                <View android:id="@+id/heart_rate_view5" android:background="@color/sport_heart_rate_maximal" android:layout_width="18dp" android:layout_height="18dp" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_heart_rate_text5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_heart_rate_maximal" android:layout_centerVertical="true" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" android:layout_toStartOf="@+id/tv_heart_rate_value5" android:layout_toEndOf="@+id/heart_rate_view5" android:layout_alignParentEnd="true"/>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/tv_heart_rate_value5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

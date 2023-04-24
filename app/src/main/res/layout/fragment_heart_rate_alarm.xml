@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/ds_heart_rate_alarm" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/layout_content" style="@style/Widget.FitCloudPro.PreferenceGroup">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_static_switch" app:preferenceSummary="@string/ds_heart_rate_alarm_static_des" app:preferenceTitle="@string/ds_heart_rate_alarm_static" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_static_value" app:preferenceTitle="@string/ds_heart_rate_alarm_value" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_dynamic_switch" app:preferenceSummary="@string/ds_heart_rate_alarm_dynamic_des" app:preferenceTitle="@string/ds_heart_rate_alarm_dynamic" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_dynamic_value" app:preferenceTitle="@string/ds_heart_rate_alarm_value" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

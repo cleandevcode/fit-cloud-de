@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/feedback_module" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding">
+            <EditText android:textAppearance="?attr/textAppearanceSubtitle1" android:id="@+id/edit_contact" android:background="@drawable/shape_color_surface_secondary_corners_8dp" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="42dp" android:hint="@string/feedback_contact_hint" android:inputType="text" android:autofillHints="emailAddress"/>
+            <RelativeLayout android:background="@drawable/shape_color_surface_secondary_corners_8dp" android:padding="8dp" android:layout_width="match_parent" android:layout_height="248dp" android:layout_marginTop="12dp">
+                <EditText android:textAppearance="?attr/textAppearanceBody2" android:gravity="start|top" android:id="@+id/edit_content" android:background="@null" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="@string/feedback_content_hint" android:maxLength="500" android:layout_above="@+id/tv_content_limit_tips" android:inputType="textMultiLine"/>
+                <TextView android:textAppearance="?attr/textAppearanceCaption" android:id="@+id/tv_content_limit_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/shape_color_surface_secondary_corners_8dp" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textAppearance="?attr/textAppearanceBody2" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feedback_img_des" android:layout_toStartOf="@+id/tv_img_limit_tips" android:layout_alignParentStart="true"/>
+                    <TextView android:textAppearance="?attr/textAppearanceCaption" android:id="@+id/tv_img_limit_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                    <ImageView android:id="@+id/img00" android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_baseline_add_48" android:scaleType="centerInside"/>
+                    <ImageView android:id="@+id/img01" android:visibility="gone" android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_baseline_add_48" android:scaleType="centerInside" android:layout_marginStart="8dp"/>
+                    <ImageView android:id="@+id/img02" android:visibility="gone" android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_baseline_add_48" android:scaleType="centerInside" android:layout_marginStart="8dp"/>
+                    <ImageView android:id="@+id/img03" android:visibility="gone" android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_baseline_add_48" android:scaleType="centerInside" android:layout_marginStart="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <Button android:enabled="false" android:id="@+id/btn_commit" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/action_commit" android:layout_marginStart="32dp" android:layout_marginEnd="32dp" style="@style/Widget.FitCloudPro.Button.Unelevated.Large"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

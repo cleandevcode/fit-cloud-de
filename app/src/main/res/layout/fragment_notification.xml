@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:menu="@menu/menu_help" app:title="@string/ds_notification" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/layout_content" style="@style/Widget.FitCloudPro.PreferenceGroup">
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_screen_off" app:preferenceTitle="@string/ds_notice_screen_off" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_all" app:preferenceTitle="@string/ds_notification_all" app:preferenceTitleDrawableStart="@drawable/ic_notification_all" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_system" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.PreferenceBase">
+                    <androidx.appcompat.widget.SwitchCompat android:id="@+id/switch_telephony" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                    <ImageView android:id="@+id/img_telephony_settings" android:background="?attr/selectableItemBackgroundBorderless" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_baseline_settings_24" android:layout_centerVertical="true" android:layout_toStartOf="@+id/switch_telephony" app:tint="?attr/colorPrimary"/>
+                    <TextView android:background="?attr/selectableItemBackgroundBorderless" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_notification_telephony" android:layout_centerVertical="true" android:layout_toStartOf="@+id/img_telephony_settings" android:layout_alignParentStart="true" app:drawableStartCompat="@drawable/ic_notification_telephony" style="@style/Widget.FitCloudPro.TextView.PreferenceTitle"/>
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.PreferenceBase">
+                    <androidx.appcompat.widget.SwitchCompat android:id="@+id/switch_sms" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                    <ImageView android:id="@+id/img_sms_settings" android:background="?attr/selectableItemBackgroundBorderless" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_baseline_settings_24" android:layout_centerVertical="true" android:layout_toStartOf="@+id/switch_sms" app:tint="?attr/colorPrimary"/>
+                    <TextView android:background="?attr/selectableItemBackgroundBorderless" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_notification_sms" android:layout_centerVertical="true" android:layout_toStartOf="@+id/img_sms_settings" android:layout_alignParentStart="true" app:drawableStartCompat="@drawable/ic_notification_sms" style="@style/Widget.FitCloudPro.TextView.PreferenceTitle"/>
+                </RelativeLayout>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_email" app:preferenceTitle="@string/ds_notification_email" app:preferenceTitleDrawableStart="@drawable/ic_notification_email" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+            </LinearLayout>
+            <include android:id="@+id/layout_app" layout="@layout/layout_app_notification"/>
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_other" app:preferenceTitle="@string/ds_notice_other" app:preferenceTitleDrawableStart="@drawable/ic_notification_other" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

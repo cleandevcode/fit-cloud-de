@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding">
+    <TextView android:textAppearance="?attr/textAppearanceSubtitle1" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_add_mark"/>
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:counterEnabled="true" app:counterMaxLength="100" app:endIconMode="clear_text" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <EditText android:id="@+id/edit_mark" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.constraintlayout.helper.widget.Flow android:layout_width="0dp" android:layout_height="wrap_content" app:constraint_referenced_ids="tv_mark1,tv_mark2,tv_mark3,tv_mark4,tv_mark5,tv_mark6,tv_mark7,tv_mark8" app:flow_horizontalGap="8dp" app:flow_verticalGap="8dp" app:flow_wrapMode="aligned" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <TextView android:gravity="center" android:id="@+id/tv_mark1" android:background="@drawable/shape_friend_mark_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_mark1" android:maxLines="1"/>
+        <TextView android:gravity="center" android:id="@+id/tv_mark2" android:background="@drawable/shape_friend_mark_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_mark2" android:maxLines="1"/>
+        <TextView android:gravity="center" android:id="@+id/tv_mark3" android:background="@drawable/shape_friend_mark_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_mark3" android:maxLines="1"/>
+        <TextView android:gravity="center" android:id="@+id/tv_mark4" android:background="@drawable/shape_friend_mark_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_mark4" android:maxLines="1"/>
+        <TextView android:gravity="center" android:id="@+id/tv_mark5" android:background="@drawable/shape_friend_mark_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_mark5" android:maxLines="1"/>
+        <TextView android:gravity="center" android:id="@+id/tv_mark6" android:background="@drawable/shape_friend_mark_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_mark6" android:maxLines="1"/>
+        <TextView android:gravity="center" android:id="@+id/tv_mark7" android:background="@drawable/shape_friend_mark_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_mark7" android:maxLines="1"/>
+        <TextView android:gravity="center" android:id="@+id/tv_mark8" android:background="@drawable/shape_friend_mark_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_mark8" android:maxLines="1"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

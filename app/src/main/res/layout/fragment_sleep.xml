@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appbar" android:background="@drawable/shape_content_highlight_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:contentScrim="@color/base_content_scrim" app:layout_scrollFlags="exitUntilCollapsed|scroll" app:titleEnabled="false">
+            <LinearLayout android:orientation="vertical" android:paddingTop="?attr/actionBarSize" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax">
+                <RadioGroup android:orientation="horizontal" android:id="@+id/rg_data" android:layout_width="match_parent" android:layout_height="wrap_content" android:layoutDirection="ltr" style="@style/Widget.FitCloudPro.ContentPadding">
+                    <RadioButton android:textColor="@color/selector_module_tab_text" android:gravity="center" android:id="@+id/rb_day" android:background="@drawable/selector_module_tab_left_bg" android:layout_width="0dp" android:layout_height="38dp" android:button="@null" android:text="@string/data_time_today" android:layout_weight="1"/>
+                    <RadioButton android:textColor="@color/selector_module_tab_text" android:gravity="center" android:id="@+id/rb_week" android:background="@drawable/selector_module_tab_middle_bg" android:layout_width="0dp" android:layout_height="38dp" android:button="@null" android:text="@string/data_time_week" android:layout_weight="1"/>
+                    <RadioButton android:textColor="@color/selector_module_tab_text" android:gravity="center" android:id="@+id/rb_month" android:background="@drawable/selector_module_tab_right_bg" android:layout_width="0dp" android:layout_height="38dp" android:button="@null" android:text="@string/data_time_month" android:layout_weight="1"/>
+                </RadioGroup>
+                <LinearLayout android:gravity="end|center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding.Horizontal">
+                    <com.github.kilnn.tool.widget.DotTextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?attr/colorOnPrimary" android:id="@+id/dot_sober" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sleep_sober" android:maxLines="1" app:dot_color="@color/sleep_chart_color_sober" app:dot_size="12dp"/>
+                    <com.github.kilnn.tool.widget.DotTextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?attr/colorOnPrimary" android:id="@+id/dot_view_sleep_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sleep_light_sleep" android:maxLines="1" android:layout_marginStart="8dp" app:dot_color="@color/sleep_chart_color_light" app:dot_size="12dp"/>
+                    <com.github.kilnn.tool.widget.DotTextView android:textAppearance="?attr/textAppearanceCaption" android:textColor="?attr/colorOnPrimary" android:id="@+id/dot_view_sleep_deep" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sleep_deep_sleep" android:maxLines="1" android:layout_marginStart="8dp" app:dot_color="@color/sleep_chart_color_deep" app:dot_size="12dp"/>
+                </LinearLayout>
+                <FrameLayout android:layout_width="match_parent" android:layout_height="256dp" android:layout_marginTop="0dp" style="@style/Widget.FitCloudPro.ContentMargin">
+                    <TextView android:textColor="?attr/colorOnPrimary" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_today_data_des" android:layout_width="wrap_content" android:layout_height="match_parent" android:drawablePadding="4dp" app:drawableStartCompat="@drawable/ic_baseline_info_24" app:drawableTint="?attr/colorOnPrimary"/>
+                    <com.topstep.fitcloud.pro.ui.widget.SleepDayView android:id="@+id/sleep_day_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <com.github.mikephil.charting.charts.BarChart android:id="@+id/chart" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                </FrameLayout>
+            </LinearLayout>
+            <com.github.kilnn.tool.widget.FitPaddingMaterialToolbar android:id="@+id/toolbar" app:layout_collapseMode="pin" app:menu="@menu/menu_share" app:title="@string/sleep_module" style="@style/Widget.FitCloudPro.Toolbar.OnPrimarySurface"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.FitCloudPro.ContentPadding">
+            <LinearLayout android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="wrap_content" android:divider="?attr/dividerVertical" android:showDividers="end|middle|beginning">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp">
+                    <com.github.kilnn.tool.widget.DotTextView android:textAppearance="?attr/textAppearanceBody1" android:id="@+id/tv_sleep_total_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sleep_last_night" android:drawablePadding="4dp" android:layout_centerVertical="true" android:layout_alignParentStart="true" app:dot_color="?attr/colorPrimary" app:dot_size="12dp"/>
+                    <TextView android:textAppearance="?attr/textAppearanceBody1" android:textStyle="bold" android:id="@+id/tv_sleep_total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp">
+                    <com.github.kilnn.tool.widget.DotTextView android:textAppearance="?attr/textAppearanceBody1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sleep_deep_sleep" android:drawablePadding="4dp" android:layout_centerVertical="true" android:layout_alignParentStart="true" app:dot_color="?attr/colorPrimary" app:dot_size="12dp"/>
+                    <TextView android:textAppearance="?attr/textAppearanceBody1" android:textStyle="bold" android:id="@+id/tv_sleep_deep" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp">
+                    <com.github.kilnn.tool.widget.DotTextView android:textAppearance="?attr/textAppearanceBody1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sleep_light_sleep" android:drawablePadding="4dp" android:layout_centerVertical="true" android:layout_alignParentStart="true" app:dot_color="?attr/colorPrimary" app:dot_size="12dp"/>
+                    <TextView android:textAppearance="?attr/textAppearanceBody1" android:textStyle="bold" android:id="@+id/tv_sleep_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp">
+                    <com.github.kilnn.tool.widget.DotTextView android:textAppearance="?attr/textAppearanceBody1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sleep_sober" android:drawablePadding="4dp" android:layout_centerVertical="true" android:layout_alignParentStart="true" app:dot_color="?attr/colorPrimary" app:dot_size="12dp"/>
+                    <TextView android:textAppearance="?attr/textAppearanceBody1" android:textStyle="bold" android:id="@+id/tv_sleep_sober" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

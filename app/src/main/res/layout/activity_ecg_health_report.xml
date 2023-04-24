@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/scroll_view" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/layout_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar_title" app:navigationIcon="@null" app:title="@string/ecg_report" style="@style/Widget.FitCloudPro.Toolbar.OnSurface"/>
+            <com.topstep.fitcloud.pro.ui.widget.EcgReportHeaderView android:id="@+id/ecg_report_header_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <com.topstep.fitcloud.pro.ui.widget.EcgReportView android:id="@+id/ecg_report_view" android:layout_width="match_parent" android:layout_height="wrap_content" app:report_ecg_line_color="@android:color/black" app:report_ecg_line_width="1dp" app:report_grid_bold_line_width="2px" app:report_grid_line_color="@color/ecg_grid_line_color" app:report_grid_line_width="1px" app:report_grid_vertical_count="40"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ecg_report_des"/>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar_navigation" style="@style/Widget.FitCloudPro.Toolbar.OnSurface"/>
+    <Button android:layout_gravity="start|bottom" android:id="@+id/btn_share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:text="@string/ecg_report_share_pdf" android:layout_marginStart="16dp" style="@style/Widget.FitCloudPro.Button.Outlined.Round"/>
+</FrameLayout>

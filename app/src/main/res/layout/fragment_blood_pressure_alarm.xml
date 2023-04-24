@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" app:title="@string/ds_blood_pressure_alarm" style="@style/Widget.FitCloudPro.Toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/layout_content" style="@style/Widget.FitCloudPro.PreferenceGroup">
+            <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_detail_enabled" app:preferenceSummary="@string/ds_blood_pressure_alarm_des" app:preferenceTitle="@string/ds_blood_pressure_alarm" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Switch"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_sbp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_blood_pressure_alarm_sbp_range" style="@style/Widget.FitCloudPro.PreferenceGroupDes"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_sbp_upper" app:preferenceSummary="@string/ds_blood_pressure_alarm_upper_des" app:preferenceTextMinWidth="96dp" app:preferenceTitle="@string/ds_blood_pressure_alarm_upper" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_sbp_lower" app:preferenceSummary="@string/ds_blood_pressure_alarm_lower_des" app:preferenceTextMinWidth="96dp" app:preferenceTitle="@string/ds_blood_pressure_alarm_lower" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_dbp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ds_blood_pressure_alarm_dbp_range" style="@style/Widget.FitCloudPro.PreferenceGroupDes"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_dbp_upper" app:preferenceSummary="@string/ds_blood_pressure_alarm_upper_des" app:preferenceTextMinWidth="96dp" app:preferenceTitle="@string/ds_blood_pressure_alarm_upper" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+                <com.github.kilnn.tool.widget.item.PreferenceItem android:id="@+id/item_dbp_lower" app:preferenceSummary="@string/ds_blood_pressure_alarm_lower_des" app:preferenceTextMinWidth="96dp" app:preferenceTitle="@string/ds_blood_pressure_alarm_lower" app:showPreferenceSummary="true" style="@style/Widget.FitCloudPro.PreferenceView.Item.Text"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
