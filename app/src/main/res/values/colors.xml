@@ -334,7 +334,7 @@
     <color name="system_ui_scrim_light">#b3ffffff</color>
     <color name="temperature_body_color">@color/color_primary</color>
     <color name="temperature_wrist_color">#ff73a0fb</color>
-    <color name="test_color">#000</color>
+    <color name="test_color">#000000</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6ffffff</color>
     <color name="transparent">#ffff</color>
@@ -344,5 +344,5 @@
     <color name="wh_pregnancy_color_early">#ffffac00</color>
     <color name="wh_pregnancy_color_later">#ff43d3f6</color>
     <color name="wh_pregnancy_color_middle">#ffff8baf</color>
-    <color name="white">#fff</color>
+    <color name="white">#ffffff</color>
 </resources>
